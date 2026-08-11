@@ -998,7 +998,7 @@
 
     let html = '';
 
-    html += `<section class="tier"><div class="tier-head"><h2>THE HOLY ONE'S</h2></div><div class="grid-center">`;
+    html += `<section class="tier"><div class="tier-head"><h2>HOLYONES</h2></div><div class="grid-center">`;
     dabestinthewrld.theHolyOnes.forEach((id, i) => { html += createUserCardHTML(id, i); });
     html += `</div></section>`;
 
@@ -1012,7 +1012,7 @@
     imp.forEach((id, i) => { html += createUserCardHTML(id, i + imp.length); });
     html += `</div></div></section>`;
 
-    html += `<section class="tier"><div class="tier-head"><h2>CHOOSEN ONES</h2></div><div class="ticker-container"><div class="ticker-track track-right">`;
+    html += `<section class="tier"><div class="tier-head"><h2>CHOSEN ONES</h2></div><div class="ticker-container"><div class="ticker-track track-right">`;
     const ch = dabestinthewrld.choosenOnes;
     ch.forEach((id, i) => { html += createUserCardHTML(id, i); });
     ch.forEach((id, i) => { html += createUserCardHTML(id, i + ch.length); });
