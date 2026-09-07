@@ -527,6 +527,46 @@
       }
     }
 
+    .card-socials {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 8px;
+      z-index: 10;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    .social-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.45);
+      color: #ffffff;
+      transform: translateY(-2px) scale(1.12);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6), 0 0 12px rgba(255, 255, 255, 0.25);
+    }
+
+    .social-btn svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+      transition: transform 0.2s ease;
+    }
+
     .card-divider {
       width: 100%;
       height: 1px;
@@ -1973,6 +2013,45 @@
       '1253704304519417889': 'https://file.garden/aiHY1T3Ry0Odnk8G/Hev%20Abi%20-%20MEDICAL.mp3'
     };
 
+    const SOCIAL_SVGS = {
+      tiktok: `<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.67 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.33V9.22a8.16 8.16 0 0 0 3.91 1.25V7.02c-.003-.11-.003-.22 0-.33z"/></svg>`,
+      telegram: `<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>`
+    };
+
+    const USER_SOCIALS = {
+      '1055696475914506331': [
+        {
+          platform: 'tiktok',
+          url: 'https://www.tiktok.com/@trevholy.gg',
+          title: 'follow me ;p'
+        }
+      ],
+      '1488524196559458485': [
+        {
+          platform: 'telegram',
+          url: 'https://t.me/tuswrld',
+          title: 'hmu ;3'
+        }
+      ],
+      '1500506437519151207': [
+        {
+          platform: 'tiktok',
+          url: 'https://www.tiktok.com/@snottydevo',
+          title: 'bisayang hacker'
+        }
+      ]
+    };
+
+    function renderSocialsHtml(userId) {
+      const socials = USER_SOCIALS[userId];
+      if (!socials || socials.length === 0) return '';
+      const links = socials.map(s => {
+        const svg = SOCIAL_SVGS[s.platform] || '';
+        return `<a href="${s.url}" target="_blank" rel="noopener noreferrer" class="social-btn" title="${s.title || s.platform}" onclick="event.stopPropagation();">${svg}</a>`;
+      }).join('');
+      return `<div class="card-socials">${links}</div>`;
+    }
+
     const userLiveLoaded = {};
 
     function getDiscordAvatarUrl(user) {
@@ -2059,7 +2138,7 @@
           isMainPlaying = true;
           setPlayingUI(true);
         })
-        .catch(() => {});
+        .catch(() => { });
     }
 
     function pauseMainAudio() {
@@ -2096,7 +2175,7 @@
         .then(() => {
           setPlayingUI(true);
         })
-        .catch(() => {});
+        .catch(() => { });
     }
 
     function pauseAllAudio() {
@@ -2114,7 +2193,7 @@
         if (currentPlayingUserId && userAudioElements[currentPlayingUserId] && !userAudioElements[currentPlayingUserId].paused) {
           pauseAllAudio();
         } else if (currentPlayingUserId && userAudioElements[currentPlayingUserId]) {
-          userAudioElements[currentPlayingUserId].play().then(() => setPlayingUI(true)).catch(() => {});
+          userAudioElements[currentPlayingUserId].play().then(() => setPlayingUI(true)).catch(() => { });
         } else if (mainAudio.paused) {
           playMainAudio();
         } else {
@@ -2194,6 +2273,8 @@
               <span class="status-text-content" id="customStatusText-${userId}"></span>
               <span class="typing-cursor"></span>
             </div>
+            
+            ${renderSocialsHtml(userId)}
             
             <div class="card-divider" id="cstatus-div-bottom-${userId}"></div>
             
