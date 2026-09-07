@@ -1,1092 +1,2906 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>tus$wrld</title>
-  <link rel="icon" type="image/x-icon" href="https://file.garden/aiHY1T3Ry0Odnk8G/dwx.png">
-  <meta name="description" content="totoo lang hindi balagbalag ;p">
-  <meta property="og:title" content="tus$wrld">
-  <meta property="og:description" content="totoo lang hindi balagbalag ;p">
-  <meta property="og:image" content="https://file.garden/aiHY1T3Ry0Odnk8G/dwx.png">
+  <title>holy</title>
+  <link rel="icon" type="image/x-icon" href="https://file.garden/aiHY1T3Ry0Odnk8G/holy.png">
+  <meta name="description" content="dili ko nimo na miss?">
+  <meta property="og:title" content="holy">
+  <meta property="og:description" content="dili ko nimo na miss?">
+  <meta property="og:image" content="https://file.garden/aiHY1T3Ry0Odnk8G/holy.png">
   <meta property="og:url" content="https://tuswrld.xyz">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://file.garden/aiHY1T3Ry0Odnk8G/dwx.png">
+  <meta name="twitter:image" content="https://file.garden/aiHY1T3Ry0Odnk8G/holy.png">
   <meta name="theme-color" content="#000000">
   <meta name="twitter:card" content="summary">
   <script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; border-color: var(--border); }
-    :root {
-      --bg: oklch(0% 0 0 / 0);
-      --fg: oklch(0.92 0.005 270);
-      --card: oklch(0.09 0.008 270);
-      --muted: oklch(86.715% 0.00146 285.36);
-      --border: oklch(1 0 0 / 8%);
-      --online: oklch(0.72 0.18 145);
-      --idle: oklch(0.78 0.16 75);
-      --dnd: oklch(0.65 0.22 25);
-      --offline: oklch(0.45 0.01 270);
-      --serif: "Cormorant Garamond", "Times New Roman", serif;
-      --sans: "Inter", system-ui, sans-serif;
-      --neon-glow: oklch(0.60 0.25 25);
-      --hero-text-color: oklch(0.92 0.005 270);
-      --hero-text-opacity: 1;
-      --span-text-color: oklch(0.60 0.25 25);
-      --lightning-flash: 0;
-    }
-    html, body {
-      background: var(--bg);
-      color: var(--fg);
-      font-family: var(--sans);
-      -webkit-font-smoothing: antialiased;
-      scroll-behavior: auto !important;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       cursor: url('https://drift.rip/media/users/cursors/cursor_3867_69bb11919e3619.60058093.png'), auto !important;
+      font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
     }
-    a, button, input, [role="button"] {
-      cursor: url('https://drift.rip/media/users/cursors/cursor_3867_69bb11919e3619.60058093.png'), auto !important;
-    }
-    body.loading-locked { overflow: hidden !important; height: 100vh !important; }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
-    main {
-      position: relative;
-      min-height: 100vh;
-      overflow-x: hidden;
-      pointer-events: none;
-      transition: pointer-events 0.3s ease;
-    }
-    body.site-loaded main { pointer-events: auto; }
-    #loadingScreen {
+
+    #particles {
       position: fixed;
-      inset: 0;
-      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: auto;
+      color: #ffffff;
+      z-index: 2;
+      background: #000000;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #070708;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.08) 100%);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.2) 100%);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    #intro-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(ellipse at center, #1a1a1a 0%, #0a0a0a 100%);
+      z-index: 99999;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #0f0f11;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      cursor: url('https://drift.rip/media/users/cursors/cursor_3867_69bb11919e3619.60058093.png'), auto !important;
-      overflow: hidden;
-      transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-      will-change: opacity, transform;
-      pointer-events: auto;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    }
+
+    .ascii-container {
+      font-family: 'Space Mono', monospace;
+      font-size: 8px;
+      line-height: 1.2;
+      white-space: pre;
+      text-align: center;
+      font-weight: 700;
+      background: linear-gradient(180deg, #ffffff 0%, #666666 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      user-select: none;
+    }
+
+    .intro-progress-wrapper {
+      margin-top: 2rem;
+      width: 300px;
+    }
+
+    .intro-progress-bar {
+      width: 100%;
+      background-color: #222;
+      border-radius: 4px;
+      padding: 2px;
+    }
+
+    .intro-progress-fill {
+      height: 4px;
+      width: 0%;
+      background: linear-gradient(90deg, #fff, #888, #fff);
+      background-size: 200% 100%;
+      border-radius: 2px;
+      transition: width 0.05s linear;
+      animation: shimmer 1.5s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -200% 0;
+      }
+
+      100% {
+        background-position: 200% 0;
+      }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 100%;
       opacity: 0;
-      transform: scale(1.02) translate3d(0,0,0);
+      transition: opacity 1s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .loading-bg-reflection {
-      position: absolute;
-      inset: -5%;
-      width: 110%;
-      height: 110%;
-      z-index: -1;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      filter: blur(12px);
-      transform: translate3d(0,0,0);
-      animation: panBg 40s ease-in-out infinite alternate;
-      will-change: transform;
-      opacity: 0.85;
+
+    .hero-section {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 3rem 1.5rem 5.5rem;
     }
-    #loadingText {
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      margin-top: 0.5rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.85rem;
+    }
+
+    .brand-logo {
+      width: 185px;
+      height: 185px;
+      object-fit: contain;
+      user-select: none;
+      -webkit-user-drag: none;
+      filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.35));
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+      cursor: pointer;
+    }
+
+    .brand-logo:hover {
+      transform: scale(1.06);
+      filter: drop-shadow(0 0 42px rgba(255, 255, 255, 0.75));
+    }
+
+    .brand-logo:active {
+      transform: scale(0.97);
+    }
+
+    header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      letter-spacing: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, #fff 0%, #888 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+
+      0%,
+      100% {
+        text-shadow: 0 0 40px rgba(0, 0, 0, 0.9), 0 0 80px rgba(255, 255, 255, 0.1);
+      }
+
+      50% {
+        text-shadow: 0 0 40px rgba(0, 0, 0, 0.9), 0 0 80px rgba(255, 255, 255, 0.3), 0 0 120px rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    header p {
+      font-size: 0.75rem;
+      color: #555;
+      text-transform: lowercase;
+      letter-spacing: 3px;
+      font-family: 'Space Mono', monospace;
+      margin-top: 0.3rem;
+      min-height: 20px;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
       position: relative;
       z-index: 2;
-      font-family: var(--serif);
-      font-weight: 300;
-      letter-spacing: 0.35em;
+    }
+
+    .card {
+      width: 125px;
+      min-width: 125px;
+      max-width: 125px;
+      height: 440px;
+      background: #111112;
+      border-radius: 24px;
+      border: 1.5px solid rgba(255, 255, 255, 0.16);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
       user-select: none;
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 1.35rem;
-      color: var(--fg);
-      text-shadow: 0 0 20px rgba(0, 0, 0, 0.6), 0 0 30px oklch(0.60 0.25 25 / 0.4);
-      animation: loadingPulse 2s infinite ease-in-out;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85);
+      transition: width 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
     }
-    @keyframes loadingPulse {
-      0%, 100% { opacity: 0.55; transform: scale(0.98); }
-      50% { opacity: 1; transform: scale(1); }
+
+    .card:hover {
+      width: 350px;
+      min-width: 350px;
+      max-width: 350px;
+      border-color: rgba(255, 255, 255, 0.28);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95);
     }
-    .bg-wrapper {
-      position: fixed;
-      inset: -5%;
-      width: 110%;
-      height: 110%;
-      z-index: -4;
-      background-color: var(--bg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      transform: translate3d(0,0,0);
-      animation: panBg 40s ease-in-out infinite alternate;
-      will-change: transform, filter;
-      transition: filter 0.04s linear;
+
+    .card-banner-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      transition: height 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+      z-index: 1;
     }
-    .bg-wrapper::after {
-      content: '';
+
+    .card:hover .card-banner-wrap {
+      height: 140px;
+    }
+
+    .card-banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: filter 0.45s ease;
+    }
+
+    .card-banner-overlay {
       position: absolute;
       inset: 0;
-      border: 12px solid transparent;
-      border-image: linear-gradient(var(--angle, 0deg), var(--neon-glow), transparent 30%, transparent 70%, var(--neon-glow)) 1;
-      mix-blend-mode: screen;
-      opacity: 0.85;
-      animation: rotateNeon 14s linear infinite, neonPulseGlow 3s ease-in-out infinite alternate;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.85) 85%, rgba(0, 0, 0, 0.95) 100%);
+      transition: opacity 0.4s ease;
+      pointer-events: none;
     }
-    @property --angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
-    @keyframes rotateNeon { to { --angle: 360deg; } }
-    @keyframes neonPulseGlow {
-      0% { filter: drop-shadow(0 0 4px var(--neon-glow)) blur(0.5px); opacity: 0.65; }
-      50% { filter: drop-shadow(0 0 16px var(--neon-glow)) drop-shadow(0 0 28px var(--neon-glow)) blur(0.8px); opacity: 0.95; }
-      100% { filter: drop-shadow(0 0 6px var(--neon-glow)) blur(0.5px); opacity: 0.75; }
+
+    .card:hover .card-banner-overlay {
+      opacity: 0;
     }
-    @keyframes panBg {
-      0% { transform: scale(1) translate3d(0, 0, 0); }
-      100% { transform: scale(1.06) translate3d(-1%, -1%, 0); }
-    }
-    .lightning-overlay {
-      position: fixed;
-      inset: 0;
+
+    .card-banner-wrap .banner-placeholder {
       width: 100%;
       height: 100%;
-      z-index: -2;
-      pointer-events: none;
-      background: white;
-      mix-blend-mode: color-dodge;
-      opacity: var(--lightning-flash);
-      will-change: opacity;
-      transition: opacity 0.04s linear;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: rgba(255, 255, 255, 0.06);
+      background: #080808;
     }
-    #lightningCanvas {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -3;
-      pointer-events: none;
-      mix-blend-mode: screen;
-    }
-    #bgParticles {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      opacity: 0.65;
-    }
-    .fog {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background: radial-gradient(ellipse at 50% 50%, oklch(0.14 0.02 270 / 0.5) 0%, oklch(0.06 0.005 270 / 0) 75%);
-      z-index: -1;
-      transform: translate3d(0,0,0);
-    }
-    .noise {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: .035;
-      mix-blend-mode: overlay;
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-      z-index: -1;
-    }
-    @keyframes up { from { opacity: 0; transform: translate3d(0,20px,0); } to { opacity: 1; transform: translate3d(0,0,0); } }
-    .up { animation: up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; }
-    .hero {
+
+    .card-body {
       position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      box-sizing: border-box;
+    }
+
+    .card .avatar-wrap {
+      position: relative;
+      width: 82px;
+      height: 82px;
+      flex-shrink: 0;
+      margin-top: 155px;
+      transition: margin-top 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+        width 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+        height 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .card:hover .avatar-wrap {
+      margin-top: 88px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .avatar-wrap img.avatar {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      background: #000;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+      border: 3.5px solid #141414;
+      display: block;
+      transition: border-color 0.35s ease;
+    }
+
+    .card:hover .avatar-wrap img.avatar {
+      border-color: #111112;
+      border-width: 4px;
+    }
+
+    .deco-img {
+      position: absolute;
+      top: -14px;
+      left: -14px;
+      width: calc(100% + 28px);
+      height: calc(100% + 28px);
+      pointer-events: none;
+      object-fit: contain;
+      z-index: 4;
+      display: none;
+    }
+
+    .status-dot {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 3px solid #141414;
+      background: #747f8d;
+      transition: all 0.3s ease;
+      z-index: 3;
+    }
+
+    .card:hover .status-dot {
+      width: 20px;
+      height: 20px;
+      border-color: #111112;
+      bottom: 3px;
+      right: 3px;
+    }
+
+    .status-dot.s-online {
+      background: #3ba55d;
+    }
+
+    .status-dot.s-idle {
+      background: #faa81a;
+    }
+
+    .status-dot.s-dnd {
+      background: #ed4245;
+    }
+
+    .status-dot.s-offline {
+      background: #747f8d;
+    }
+
+    .card-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-top: 14px;
+      letter-spacing: -0.3px;
+      white-space: nowrap;
+      width: 100%;
+      padding: 0 10px;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex-shrink: 0;
+      transition: font-size 0.35s ease, margin-top 0.35s ease;
+    }
+
+    .card:hover .card-name {
+      font-size: 1.45rem;
+      margin-top: 10px;
+    }
+
+    .card-expanded-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.25s ease, max-height 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .card:hover .card-expanded-content {
+      opacity: 1;
+      pointer-events: auto;
+      max-height: 280px;
+      transition: opacity 0.35s ease 0.12s, max-height 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .card-handle {
+      font-size: 0.92rem;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.62);
+      margin-top: 3px;
+      letter-spacing: 0.1px;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .custom-status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.88);
+      margin-top: 5px;
+      max-width: 90%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .status-emoji-img {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    .status-emoji {
+      font-size: 0.95rem;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .status-text-content {
+      font-size: 0.84rem;
+      color: rgba(255, 255, 255, 0.88);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .typing-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 13px;
+      background: rgba(255, 255, 255, 0.75);
+      margin-left: 2px;
+      animation: cursorBlink 0.8s infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes cursorBlink {
+
+      0%,
+      100% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    .card-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.10);
+      margin: 14px 0 16px 0;
+      flex-shrink: 0;
+    }
+
+    .activity-section {
+      width: 100%;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      box-sizing: border-box;
+    }
+
+    .no-activity {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.2px;
+      text-align: left;
+    }
+
+    .spotify-widget {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: rgba(20, 20, 20, 0.7);
+      border-radius: 12px;
+      padding: 0.5rem 0.8rem;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .spotify-widget img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .sp-track {
+      flex: 1;
+      min-width: 0;
+      text-align: left;
+    }
+
+    .sp-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sp-artist {
+      font-size: 0.68rem;
+      color: #999999;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sp-icon {
+      color: #1db954;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .rpc-widget {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: rgba(20, 20, 20, 0.7);
+      border-radius: 12px;
+      padding: 0.5rem 0.8rem;
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-sizing: border-box;
+    }
+
+    .rpc-asset-wrap {
+      position: relative;
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+    }
+
+    .rpc-large-img {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .rpc-fallback-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .rpc-small-img {
+      position: absolute;
+      bottom: -3px;
+      right: -3px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid #141414;
+      background: #141414;
+      object-fit: cover;
+    }
+
+    .rpc-details-col {
+      flex: 1;
+      min-width: 0;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .rpc-header-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 1px;
+    }
+
+    .rpc-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .rpc-details-text {
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.8);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .rpc-state-text {
+      font-size: 0.65rem;
+      color: #999999;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .rpc-elapsed {
+      font-size: 0.62rem;
+      color: #777777;
+      margin-top: 1px;
+    }
+
+    .header-section {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .tuswrld-sub {
+      font-size: 0.75rem;
+      letter-spacing: 7px;
+      color: #aaaaaa;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    }
+
+    .tuswrld-title {
+      font-family: 'Cinzel', serif;
+      font-size: 4rem;
+      font-weight: 900;
+      letter-spacing: 14px;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-shadow: 0 0 40px rgba(0, 0, 0, 0.9), 0 0 80px rgba(0, 0, 0, 0.5);
+    }
+
+    #musicToggle {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      background: rgba(10, 10, 10, 0.55);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      outline: none;
+    }
+
+    #musicToggle:hover {
+      background: rgba(22, 22, 22, 0.85);
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: scale(1.08);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.85), 0 0 12px rgba(255, 255, 255, 0.08);
+    }
+
+    .music-bars {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3.5px;
+      height: 24px;
+    }
+
+    .music-bar {
+      width: 3px;
+      background: #ffffff;
+      border-radius: 2px;
+      transition: height 0.25s ease;
+      display: block;
+    }
+
+    #musicToggle .music-bar {
+      height: 6px;
+    }
+
+    #musicToggle.playing .music-bar:nth-child(1) {
+      animation: eqWave1 0.7s ease-in-out infinite alternate;
+    }
+
+    #musicToggle.playing .music-bar:nth-child(2) {
+      animation: eqWave2 0.55s ease-in-out infinite alternate;
+    }
+
+    #musicToggle.playing .music-bar:nth-child(3) {
+      animation: eqWave3 0.8s ease-in-out infinite alternate;
+    }
+
+    #musicToggle.playing .music-bar:nth-child(4) {
+      animation: eqWave4 0.65s ease-in-out infinite alternate;
+    }
+
+    @keyframes eqWave1 {
+      0% {
+        height: 6px;
+      }
+
+      100% {
+        height: 16px;
+      }
+    }
+
+    @keyframes eqWave2 {
+      0% {
+        height: 8px;
+      }
+
+      100% {
+        height: 25px;
+      }
+    }
+
+    @keyframes eqWave3 {
+      0% {
+        height: 6px;
+      }
+
+      100% {
+        height: 20px;
+      }
+    }
+
+    @keyframes eqWave4 {
+      0% {
+        height: 5px;
+      }
+
+      100% {
+        height: 14px;
+      }
+    }
+
+    .members-section {
+      width: 100%;
+      max-width: 1350px;
+      padding: 3rem 1.5rem 8rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .members-header {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 50vh;
-      padding: 4rem 2rem;
+      gap: 16px;
+      margin-bottom: 2.5rem;
+      width: 100%;
       text-align: center;
     }
-    .hero-icon {
-      width: min(10rem, 22vw);
-      max-width: 11rem;
-      margin-bottom: 1rem;
+
+    .members-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.95rem;
+      letter-spacing: 8px;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      text-shadow: 0 0 16px rgba(255, 255, 255, 0.2);
+      user-select: none;
+    }
+
+    .drac-banner-bg {
+      position: fixed;
+      inset: 0px;
+      background-position: center center;
+      background-size: cover;
+      opacity: 0;
+      filter: blur(2px) brightness(0.6);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-image 0.3s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .drac-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(320px, 580px));
+      gap: 26px;
+      z-index: 2;
+      width: 100%;
+      max-width: 1250px;
+      position: relative;
+      justify-content: center;
+      padding: 10px 15px 60px;
+      margin: 0 auto;
+    }
+
+    .drac {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      background: rgba(12, 12, 15, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      cursor: pointer;
+      user-select: none;
+      height: 145px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      transition: border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .drac:hover {
+      transform: translateY(-4px) scale(1.015);
+      border-color: rgba(255, 255, 255, 0.35);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.95), 0 0 25px rgba(255, 255, 255, 0.08);
+    }
+
+    .drac-banner {
+      position: absolute;
+      inset: 0;
+      background-position: center;
+      background-size: cover;
+      opacity: 0.3;
+      transition: opacity 0.45s ease, transform 0.5s ease;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .drac:hover .drac-banner {
+      opacity: 0.65;
+      transform: scale(1.04);
+    }
+
+    .drac-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(8, 8, 10, 0.94) 0%, rgba(8, 8, 10, 0.68) 50%, rgba(8, 8, 10, 0.32) 100%);
+      z-index: 2;
+      pointer-events: none;
+      transition: opacity 0.45s ease;
+    }
+
+    .drac-content {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 28px;
+      gap: 22px;
+      box-sizing: border-box;
+    }
+
+    .drac-content .avatar-wrap {
+      position: relative;
+      width: 84px;
+      height: 84px;
+      min-width: 84px;
+      min-height: 84px;
+      margin: 0;
+      padding: 0;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .drac-content .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 3px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.85);
+      background-color: #121216;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .drac:hover .drac-content .avatar {
+      border-color: rgba(255, 255, 255, 0.75);
+      transform: scale(1.04);
+    }
+
+    .drac-content .deco-img {
+      position: absolute;
+      top: -14px;
+      left: -14px;
+      width: calc(100% + 28px);
+      height: calc(100% + 28px);
+      pointer-events: none;
+      object-fit: contain;
+      z-index: 4;
+      display: none;
+    }
+
+    .drac-content .status-dot {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 3px solid #101014;
+      z-index: 5;
+      background: #747f8d;
+      transition: background-color 0.3s ease;
+    }
+
+    .drac-content .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      min-width: 0;
+      flex: 1;
+      text-align: left;
+    }
+
+    .drac-content .info h1 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      letter-spacing: -0.2px;
+      font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      text-align: left;
+    }
+
+    .drac-content .info p {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-family: 'Space Mono', monospace;
+      margin: 4px 0 0;
+      padding: 0;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      text-align: left;
+    }
+
+    .card-reveal {
+      opacity: 0;
+      transform: translateY(35px) scale(0.97);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+      will-change: opacity, transform;
+    }
+
+    .card-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .hero-section,
+    .intro-holy-section,
+    .members-section,
+    .archives-section {
+      scroll-margin-top: 50px;
+    }
+
+    .intro-holy-section {
+      width: 100%;
+      padding: 6rem 1.5rem 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      min-height: 60vh;
+    }
+
+    .intro-holy-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.45);
+      margin-bottom: 2.8rem;
+      text-align: center;
+      user-select: none;
+    }
+
+    .intro-holy-text-wrap {
+      max-width: 780px;
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      min-height: 160px;
+    }
+
+    .intro-holy-text {
+      font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: rgba(255, 255, 255, 0.48);
+      text-align: center;
+      letter-spacing: 0.2px;
+    }
+
+    .intro-holy-text .intro-typing-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.1em;
+      background: rgba(255, 255, 255, 0.65);
+      margin-left: 2px;
+      animation: introTypingBlink 0.75s step-end infinite;
+      vertical-align: text-bottom;
+    }
+
+    @keyframes introTypingBlink {
+
+      0%,
+      100% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    .intro-holy-join-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-    }
-    .hero-icon img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .title, .tagline { position: relative; z-index: 2; }
-    .title {
-      font-family: var(--serif);
-      font-weight: 300;
-      font-size: clamp(2.5rem, 8vw, 5.5rem);
-      letter-spacing: -.02em;
-      text-shadow: 0 0 40px oklch(1 0 0 / .12);
-      color: var(--hero-text-color);
-      opacity: var(--hero-text-opacity);
-    }
-    .title span {
-      color: var(--span-text-color);
-      animation: textShimmer 3s ease-in-out infinite alternate;
-    }
-    .tagline {
-      margin-top: 1.5rem;
-      font-size: .75rem;
+      gap: 8px;
+      margin-top: 3rem;
+      padding: 12px 36px;
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      border-radius: 50px;
+      background: transparent;
+      color: #ffffff;
+      font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      letter-spacing: .8em;
-      color: var(--muted);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      opacity: 0;
+      transform: translateY(14px) scale(0.92);
     }
-    section.tier { position: relative; max-width: 80rem; margin: 0 auto; padding: 3rem 2rem; }
-    .tier-head {
+
+    .intro-holy-join-btn.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .intro-holy-join-btn:hover {
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2), 0 12px 30px rgba(0, 0, 0, 0.6);
+      transform: translateY(-2px) scale(1.04);
+    }
+
+    .intro-holy-join-btn:active {
+      transform: scale(0.97);
+    }
+
+    .intro-holy-divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+      margin: 0 auto 2rem;
+    }
+
+    .archives-section {
+      width: 100%;
+      max-width: 1350px;
+      padding: 2rem 1.5rem 8rem;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      gap: 0.4rem;
-      padding-bottom: 1rem;
-      margin-bottom: 2.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .tier-head h2 {
-      font-family: var(--serif);
-      font-weight: 300;
-      font-size: clamp(1.8rem, 4vw, 2.2rem);
-      letter-spacing: .1em;
-    }
-    .grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.25rem; }
-    @media(min-width:480px){ .grid { grid-template-columns: repeat(3,1fr); } }
-    @media(min-width:640px){ .grid { grid-template-columns: repeat(4,1fr); } }
-    @media(min-width:900px){ .grid { grid-template-columns: repeat(6,1fr); } }
-    .grid-center { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; }
-    .grid-center .card { width: calc(50% - 0.625rem); max-width: 180px; cursor: url('https://drift.rip/media/users/cursors/cursor_3867_69bb11919e3619.60058093.png'), auto !important; }
-    @media(min-width:480px){ .grid-center .card { width: calc(33.333% - 0.84rem); } }
-    @media(min-width:640px){ .grid-center .card { width: calc(25% - 0.94rem); } }
-    @media(min-width:900px){ .grid-center .card { width: calc(16.666% - 1.05rem); } }
-    .grid-aff { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
-    @media(min-width:480px){ .grid-aff { grid-template-columns: repeat(2,1fr); } }
-    @media(min-width:900px){ .grid-aff { grid-template-columns: repeat(3,1fr); } }
-    .ticker-container {
-      overflow: hidden;
-      width: 100%;
-      padding: 1rem 0;
       position: relative;
-      mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
-      -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
-    }
-    .ticker-track {
-      display: flex;
-      gap: 1.25rem;
-      width: max-content;
-      will-change: transform;
-    }
-    .ticker-track:hover { animation-play-state: paused; }
-    .ticker-track .card { width: 180px; flex-shrink: 0; cursor: url('https://drift.rip/media/users/cursors/cursor_3867_69bb11919e3619.60058093.png'), auto !important; }
-    .track-left { animation: scrollLeft 30s linear infinite; }
-    @keyframes scrollLeft {
-      0% { transform: translate3d(0, 0, 0); }
-      100% { transform: translate3d(-50%, 0, 0); }
-    }
-    .track-right { animation: scrollRight 30s linear infinite; }
-    @keyframes scrollRight {
-      0% { transform: translate3d(-50%, 0, 0); }
-      100% { transform: translate3d(0, 0, 0); }
-    }
-    .card, .aff, .profile-card {
-      position: relative;
-      border-radius: .6rem;
-      border: 1px solid var(--border);
-      background: radial-gradient(400px circle at var(--mouse-x, 0) var(--mouse-y, 0), oklch(1 0 0 / 4%), transparent 60%), oklch(0.09 0.008 270 / .3);
-      backdrop-filter: blur(12px);
-      transition: border-color .4s, box-shadow .4s, background .3s, transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
-      will-change: transform, background;
-    }
-    .card { display: flex; flex-direction: column; align-items: center; gap: .8rem; padding: 1.5rem 1.25rem; }
-    .card:hover, .aff:hover {
-      border-color: oklch(0.60 0.25 25 / .5);
-      box-shadow: 0 15px 35px -10px oklch(0 0 0 / .6), 0 0 15px 0px oklch(0.60 0.25 25 / 0.2);
-      background: radial-gradient(400px circle at var(--mouse-x, 0) var(--mouse-y, 0), oklch(1 0 0 / 6%), transparent 60%), oklch(0.09 0.008 270 / .5);
-    }
-    .ava { position: relative; width: 80px; height: 80px; }
-    .ava img.avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; outline: 1px solid var(--border); transition: transform .4s cubic-bezier(0.25, 1, 0.5, 1); }
-    .card:hover .ava img.avatar { transform: scale(1.06); }
-    .ava .placeholder {
-      display: flex; align-items: center; justify-content: center;
-      width: 80px; height: 80px; border-radius: 50%;
-      background: oklch(0.14 0.01 270);
-      font-family: var(--serif); font-size: 1.5rem;
-      color: oklch(0.92 0.005 270 / .7);
-      outline: 1px solid var(--border);
-    }
-    .ava .deco {
-      position: absolute; inset: 0;
-      width: 80px; height: 80px;
-      transform: scale(1.18);
-      pointer-events: none;
       z-index: 2;
     }
-    .ava .dot {
-      position: absolute; bottom: 4px; right: 4px;
-      width: 12px; height: 12px;
-      border-radius: 50%;
-      outline: 3px solid oklch(0.09 0.008 270);
-      z-index: 3;
-    }
-    .dot.online { background: var(--online); animation: statusBreathe 2s infinite ease-in-out; }
-    .dot.idle { background: var(--idle); }
-    .dot.dnd { background: var(--dnd); }
-    .dot.offline { background: var(--offline); }
-    .meta { text-align: center; z-index: 1; width: 100%; }
-    .meta .name {
-      font-size: .85rem; font-weight: 500;
-      color: oklch(0.92 0.005 270 / .95);
-      max-width: 11rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-      transition: color .3s;
-      margin: 0 auto;
-    }
-    .card:hover .meta .name { color: #fff; }
-    .meta .role {
-      margin-top: .25rem;
-      font-size: .6rem; text-transform: uppercase; letter-spacing: .4em;
-      color: var(--muted);
-      max-width: 11rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-    }
-    .aff { display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem; }
-    .aff img.server-icon { width: 56px; height: 56px; border-radius: .5rem; object-fit: cover; outline: 1px solid var(--border); transition: transform .3s; }
-    .aff .aff-placeholder {
-      display: flex; align-items: center; justify-content: center;
-      width: 56px; height: 56px; border-radius: .5rem;
-      background: oklch(0.14 0.01 270);
-      font-family: var(--serif); font-size: 1.2rem;
-      color: oklch(0.92 0.005 270 / .7);
-      outline: 1px solid var(--border);
-      flex-shrink: 0;
-      transition: transform .3s;
-    }
-    .aff:hover img.server-icon, .aff:hover .aff-placeholder { transform: scale(1.04); }
-    .aff .info { flex: 1; min-width: 0; }
-    .aff .info .n {
-      font-size: .85rem; font-weight: 500;
-      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-      transition: color .3s;
-    }
-    .aff:hover .info .n { color: #fff; }
-    .aff .info .t {
-      margin-top: .25rem;
-      font-size: .6rem; text-transform: uppercase; letter-spacing: .4em;
-      color: var(--muted);
-      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-    }
-    .aff .stat { text-align: right; flex-shrink: 0; }
-    .aff .stat .row {
-      display: flex; justify-content: flex-end; align-items: center; gap: .5rem;
-      font-size: .8rem; font-weight: 500;
-      color: oklch(0.92 0.005 270 / .85);
-    }
-    .aff .stat .row .pulse {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--online);
-      animation: statusBreathe 1.5s infinite ease-in-out;
-    }
-    .aff .stat .lbl {
-      margin-top: .15rem;
-      font-size: .55rem; text-transform: uppercase; letter-spacing: .3em;
-      color: var(--muted);
-    }
-    @keyframes statusBreathe {
-      0%, 100% { transform: scale(1); opacity: 0.9; }
-      50% { transform: scale(1.12); opacity: 1; box-shadow: 0 0 8px 2.5px oklch(0.72 0.18 145 / 0.3); }
-    }
-    @keyframes textShimmer {
-      0% { color: oklch(0.60 0.25 25 / .4); text-shadow: 0 0 8px transparent; }
-      100% { color: oklch(0.60 0.25 25 / 1); text-shadow: 0 0 20px oklch(0.60 0.25 25 / 0.6), 0 0 35px oklch(0.60 0.25 25 / 0.3); }
-    }
-    .metrics-footer-panel {
+
+    .archives-header {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      gap: 1.5rem;
-      max-width: 24rem;
-      margin: 4rem auto 0 auto;
-      padding: 0.6rem 1rem;
-      border-radius: 2rem;
-      border: 1px solid var(--border);
-      background: oklch(0.09 0.008 270 / 0.2);
-      backdrop-filter: blur(8px);
-      font-size: 0.65rem;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 2.5rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .archives-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.95rem;
+      letter-spacing: 8px;
+      color: rgba(255, 255, 255, 0.5);
       text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--muted);
+      text-shadow: 0 0 16px rgba(255, 255, 255, 0.2);
+      user-select: none;
     }
-    .metrics-item { display: flex; align-items: center; gap: 0.5rem; }
-    .metrics-divider { width: 1px; height: 10px; background: var(--border); }
-    .like-button-action {
-      background: none; border: none;
-      color: inherit;
-      font-family: inherit; font-size: inherit; letter-spacing: inherit; text-transform: inherit;
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      cursor: url('https://drift.rip/media/users/cursors/cursor_3867_69bb11919e3619.60058093.png'), auto !important;
-      transition: color 0.3s ease;
+
+    .archives-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px 24px;
+      width: 100%;
+      max-width: 1100px;
+      padding: 10px 0 40px;
     }
-    .like-button-action svg {
-      width: 11px; height: 11px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2px;
-      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), fill 0.3s ease, stroke 0.3s ease;
+
+    .archive-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      cursor: pointer;
+      user-select: none;
     }
-    .like-button-action:hover { color: var(--fg); }
-    .like-button-action.is-active { color: #ff0000; }
-    .like-button-action.is-active svg { fill: #ff0000; stroke: #ff0000; transform: scale(1.15); filter: drop-shadow(0 0 6px rgba(255,0,0,0.6)); }
-    #musicPlayerWidget {
+
+    .archive-thumb-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #09090c;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+    .archive-card:hover .archive-thumb-box {
+      transform: translateY(-4px) scale(1.015);
+      border-color: rgba(255, 255, 255, 0.35);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.95), 0 0 25px rgba(255, 255, 255, 0.08);
+    }
+
+    .archive-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+      filter: brightness(0.92);
+    }
+
+    .archive-card:hover .archive-thumb-img {
+      transform: scale(1.04);
+      filter: brightness(1);
+    }
+
+    .archive-thumb-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.45) 100%);
+      pointer-events: none;
+    }
+
+    .archive-play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.24);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1.5px solid rgba(255, 255, 255, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+      pointer-events: none;
+    }
+
+    .archive-play-btn i {
+      color: #ffffff;
+      font-size: 1.35rem;
+      margin-left: 4px;
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+    }
+
+    .archive-card:hover .archive-play-btn {
+      transform: translate(-50%, -50%) scale(1.12);
+      background: rgba(255, 255, 255, 0.38);
+      border-color: rgba(255, 255, 255, 0.75);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 255, 255, 0.2);
+    }
+
+    .archive-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 4px;
+    }
+
+    .archive-author-avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .archive-author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .archive-author-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.75);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: color 0.25s ease;
+    }
+
+    .archive-card:hover .archive-author-name {
+      color: #ffffff;
+    }
+
+    .archive-reveal {
+      opacity: 0;
+      transform: translateY(40px) scale(0.94);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .archive-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .top-nav {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      top: 28px;
+      right: 36px;
       z-index: 1000;
       display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      padding: 0.75rem 1rem;
-      min-width: 220px;
-      max-width: 280px;
-      background: oklch(0.09 0.008 270 / .6);
-      border: 1px solid var(--border);
-      border-radius: 0.5rem;
-      backdrop-filter: blur(16px);
-      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
-      font-family: var(--sans);
-      transition: border-color 0.3s, transform 0.3s;
-    }
-    #musicPlayerWidget:hover { border-color: oklch(0.92 0.005 270 / .2); }
-    .player-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
-    .player-meta { display: flex; flex-direction: column; min-width: 0; flex: 1; }
-    .player-track-index { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--muted); }
-    .player-title { font-size: 0.75rem; font-weight: 500; color: oklch(0.92 0.005 270 / .95); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 0.1rem; }
-    .visualizer-container { display: flex; align-items: flex-end; gap: 2px; width: 20px; height: 14px; margin-top: 4px; }
-    .v-bar { width: 3px; height: 100%; background-color: var(--neon-glow); transform-origin: bottom; transform: scaleY(0.1); transition: transform 0.3s ease; }
-    .playing .v-bar { animation: bounceVisualizer 1.2s ease-in-out infinite alternate; }
-    .playing .v-bar:nth-child(2) { animation-delay: -0.4s; animation-duration: 0.8s; }
-    .playing .v-bar:nth-child(3) { animation-delay: -0.2s; animation-duration: 1.0s; }
-    .playing .v-bar:nth-child(4) { animation-delay: -0.7s; animation-duration: 0.7s; }
-    @keyframes bounceVisualizer { 0% { transform: scaleY(0.1); } 100% { transform: scaleY(1); } }
-    .player-controls { display: flex; align-items: center; gap: 0.75rem; margin-top: 0.25rem; }
-    .player-btn {
-      background: none; border: none;
-      color: var(--muted);
-      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em;
-      cursor: url('https://drift.rip/media/users/cursors/cursor_3867_69bb11919e3619.60058093.png'), auto !important;
-      padding: 2px 0;
-      transition: color 0.2s, transform 0.1s;
-    }
-    .player-btn:hover { color: var(--fg); }
-    .player-btn:active { transform: scale(0.95); }
-    .player-divider { color: var(--border); font-size: 0.7rem; user-select: none; }
-    .profile-view-container { max-width: 34rem; margin: 6rem auto; padding: 2rem; }
-    .back-btn {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em;
-      color: var(--muted);
-      cursor: url('https://drift.rip/media/users/cursors/cursor_3867_69bb11919e3619.60058093.png'), auto !important;
-      margin-bottom: 2rem;
-      transition: color 0.3s;
-      border: none; background: none;
-    }
-    .back-btn:hover { color: var(--fg); }
-    .profile-card {
-      border-radius: 1rem;
-      background: oklch(0.09 0.008 270 / .4);
-      backdrop-filter: blur(16px);
-      padding: 3rem 2.5rem;
-      display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 1.8rem;
-      text-align: center;
-      box-shadow: 0 30px 60px -20px rgba(0,0,0,0.8);
-      transform: none !important;
+      gap: 28px;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      padding: 0;
+      user-select: none;
     }
-    .profile-card .ava-large { position: relative; width: 140px; height: 140px; }
-    .profile-card .ava-large img.avatar { width: 140px; height: 140px; border-radius: 50%; outline: 1px solid var(--border); }
-    .profile-card .ava-large .deco { position: absolute; inset: 0; width: 140px; height: 140px; transform: scale(1.18); z-index: 2; }
-    .profile-card .ava-large .dot { position: absolute; bottom: 6px; right: 6px; width: 20px; height: 20px; border-radius: 50%; outline: 4px solid oklch(0.09 0.008 270); z-index: 3; }
-    .profile-info { width: 100%; }
-    .profile-name { font-family: var(--serif); font-size: 2.4rem; font-weight: 300; color: #fff; }
-    .profile-tag { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; margin-top: 0.2rem; }
-    .profile-divider-line { width: 100%; height: 1px; background: var(--border); margin: 1.5rem 0; }
-    .profile-details-grid { display: flex; flex-direction: column; gap: 1.2rem; text-align: left; width: 100%; }
-    .detail-block { display: flex; flex-direction: column; gap: 0.4rem; }
-    .detail-label { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); }
-    .detail-val { font-size: 0.85rem; color: oklch(0.92 0.005 270 / .95); word-break: break-word; }
-    .profile-status {
-      font-size: 0.8rem;
-      color: var(--muted);
+
+    .top-nav-link {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      letter-spacing: 0.2em;
-      padding: 0.3rem 1rem;
-      border-radius: 2rem;
-      border: 1px solid var(--border);
-      background: oklch(0.09 0.008 270 / 0.3);
-      display: inline-block;
-      margin-top: 0.2rem;
+      color: rgba(255, 255, 255, 0.45);
+      text-decoration: none;
+      transition: color 0.25s ease, text-shadow 0.25s ease;
+      position: relative;
+      padding: 6px 0;
+      cursor: pointer;
     }
-    .profile-status .status-text.online { color: var(--online); }
-    .profile-status .status-text.idle { color: var(--idle); }
-    .profile-status .status-text.dnd { color: var(--dnd); }
-    .profile-status .status-text.offline { color: var(--offline); }
+
+    .top-nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: 100%;
+      height: 1.5px;
+      background: #ffffff;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: center;
+    }
+
+    .top-nav-link:hover {
+      color: #ffffff;
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+    }
+
+    .top-nav-link:hover::after,
+    .top-nav-link.active::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+
+    .top-nav-link.active {
+      color: #ffffff;
+      text-shadow: 0 0 14px rgba(255, 255, 255, 0.75);
+    }
+
+    .top-nav-logo-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background: transparent;
+      border: none;
+      text-decoration: none;
+      padding: 0;
+      flex-shrink: 0;
+      cursor: pointer;
+      opacity: 0.65;
+      transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .top-nav-logo-img {
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+      display: block;
+      pointer-events: none;
+    }
+
+    .top-nav-logo-btn:hover {
+      opacity: 1;
+      transform: scale(1.12);
+    }
+
+    @media (max-width: 768px) {
+      .top-nav {
+        top: 16px;
+        right: 16px;
+        gap: 16px;
+      }
+
+      .top-nav-link {
+        font-size: 0.72rem;
+        letter-spacing: 1.5px;
+      }
+
+      .top-nav-logo-btn {
+        width: 26px;
+        height: 26px;
+      }
+
+      .top-nav-logo-img {
+        width: 22px;
+        height: 22px;
+      }
+
+      .hero-section {
+        min-height: auto;
+        padding: 4rem 1rem 3rem;
+      }
+
+      .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .members-section {
+        padding: 3rem 1rem 6rem;
+      }
+
+      .intro-holy-section {
+        padding: 4rem 1.2rem 3.5rem;
+        min-height: 50vh;
+      }
+
+      .intro-holy-text {
+        font-size: 0.92rem;
+        line-height: 1.75;
+      }
+
+      .intro-holy-text-wrap {
+        min-height: 200px;
+      }
+
+      .archives-section {
+        padding: 2rem 1rem 5rem;
+      }
+
+      .archives-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .drac-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 10px 10px 40px;
+      }
+
+      .drac {
+        height: 125px;
+        max-width: 100%;
+      }
+
+      .drac-content {
+        padding: 0 18px;
+        gap: 16px;
+      }
+
+      .drac-content .avatar-wrap {
+        width: 70px;
+        height: 70px;
+      }
+
+      .drac-content .info h1 {
+        font-size: 1.25rem;
+      }
+
+      .drac-content .info p {
+        font-size: 0.82rem;
+      }
+
+      .card {
+        width: 320px;
+        min-width: 320px;
+        max-width: 320px;
+        height: auto;
+        min-height: 460px;
+      }
+
+      .card-expanded-body {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .brand-logo {
+        width: 145px;
+        height: 145px;
+      }
+
+      .tuswrld-title {
+        font-size: 2.8rem;
+        letter-spacing: 8px;
+      }
+
+      .ascii-container {
+        font-size: 5px;
+      }
+
+      .intro-progress-wrapper {
+        width: 200px;
+      }
+    }
   </style>
 </head>
-<body class="site-loaded">
 
-<main>
-  <div class="bg-wrapper" id="bgTarget" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://file.garden/aZxScw6WOg9KnOwy/58d809b6-50e4-466a-b9ad-9bde89441bf5.png'); filter: blur(0.98px);"></div>
-  <div class="lightning-overlay" id="lightningTarget" style="opacity: 0;"></div>
-  <canvas id="lightningCanvas"></canvas>
-  <canvas id="bgParticles"></canvas>
-  <div class="fog" aria-hidden="true"></div>
-  <div class="noise" aria-hidden="true"></div>
+<body>
 
-  <div id="lobbyView" style="display: block;">
-    <section class="hero">
-      <div class="hero-icon">
-        <img src="https://file.garden/aiHY1T3Ry0Odnk8G/icx.png" alt="tus$wrld icon">
+  <canvas id="particles"></canvas>
+
+  <div id="intro-overlay">
+    <div class="ascii-container" id="ascii-text">
+      ⠀⢀⡠⠤⠔⢲⢶⡖⠒⠤⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      ⠀⠀⣠⡚⠁⢀⠀⠀⢄⢻⣿⠀⠀⠀⡙⣷⢤⡀⠀⠀⠀⠀⠀⠀
+      ⠀⡜⢱⣇⠀⣧⢣⡀⠀⡀⢻⡇⠀⡄⢰⣿⣷⡌⣢⡀⠀⠀⠀⠀
+      ⠸⡇⡎⡿⣆⠹⣷⡹⣄⠙⣽⣿⢸⣧⣼⣿⣿⣿⣶⣼⣆⠀⠀⠀
+      ⣷⡇⣷⡇⢹⢳⡽⣿⡽⣷⡜⣿⣾⢸⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀
+      ⣿⡇⡿⣿⠀⠣⠹⣾⣿⣮⠿⣞⣿⢸⣿⣛⢿⣿⡟⠯⠉⠙⠛⠓
+      ⣿⣇⣷⠙⡇⠀⠁⠀⠉⣽⣷⣾⢿⢸⣿⠀⢸⣿⢿⠀⠀⠀⠀⠀
+      ⡟⢿⣿⣷⣾⣆⠀⠀⠘⠘⠿⠛⢸⣼⣿⢖⣼⣿⠘⡆⠀⠀⠀⠀
+      ⠃⢸⣿⣿⡘⠋⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⡆⠇⠀⠀⠀⠀
+      ⠀⢸⡿⣿⣇⠀⠈⠀⠤⠀⠀⢀⣿⣿⣿⣿⣿⣿⣧⢸⠀⠀⠀⠀
+      ⠀⠈⡇⣿⣿⣷⣤⣀⠀⣀⠔⠋⣿⣿⣿⣿⣿⡟⣿⡞⡄⠀⠀⠀
+      ⠀⠀⢿⢸⣿⣿⣿⣿⣿⡇⠀⢠⣿⡏⢿⣿⣿⡇⢸⣇⠇⠀⠀⠀
+      ⠀⠀⢸⡏⣿⣿⣿⠟⠋⣀⠠⣾⣿⠡⠀⢉⢟⠷⢼⣿⣿⠀⠀⠀
+      ⠀⠀⠈⣷⡏⡱⠁⠀⠊⠀⠀⣿⣏⣀⡠⢣⠃⠀⠀⢹⣿⡄⠀⠀
+      ⠀⠀⠘⢼⣿⠀⢠⣤⣀⠉⣹⡿⠀⠁⠀⡸⠀⠀⠀⠈⣿⡇
+    </div>
+    <div class="intro-progress-wrapper">
+      <div class="intro-progress-bar">
+        <div class="intro-progress-fill" id="intro-progress-fill"></div>
       </div>
-      <h1 class="title">tus<span>$wrld</span></h1>
-      <p class="tagline">we rule the wrld</p>
+    </div>
+  </div>
+
+  <button id="musicToggle" aria-label="Toggle Music" title="Click to Play / Pause Music">
+    <div class="music-bars">
+      <span class="music-bar"></span>
+      <span class="music-bar"></span>
+      <span class="music-bar"></span>
+      <span class="music-bar"></span>
+    </div>
+  </button>
+
+  <nav class="top-nav" id="topNav" aria-label="Main Navigation">
+    <a href="#intro-holy" class="top-nav-link" data-section="intro-holy">about</a>
+    <a href="#members-section" class="top-nav-link" data-section="members-section">members</a>
+    <a href="#archives-section" class="top-nav-link" data-section="archives-section">archives</a>
+    <a href="https://discord.gg/wRZTDBkmbh" target="_blank" rel="noopener noreferrer" class="top-nav-logo-btn"
+      title="mapupunta ka sa mundo ng mga banal">
+      <img src="https://file.garden/aiHY1T3Ry0Odnk8G/holy.png" alt="Holy" class="top-nav-logo-img" />
+    </a>
+  </nav>
+
+  <div class="drac-banner-bg" id="dracBannerBg"></div>
+
+  <div class="container" id="main-content">
+    <section id="hero-section" class="hero-section">
+      <header>
+        <div class="brand-logo-container">
+          <a href="https://discord.gg/wRZTDBkmbh" target="_blank" rel="noopener noreferrer" title="Join Discord Server"
+            style="display: inline-block; text-decoration: none;">
+            <img src="https://file.garden/aiHY1T3Ry0Odnk8G/holy.png" alt="Holy" class="brand-logo" id="brandLogo" />
+          </a>
+        </div>
+        <div class="tuswrld-sub">— holy —</div>
+        <p>totoo lang hindi balagbag.</p>
+      </header>
+
+      <div class="cards-container" id="cardsContainer"></div>
     </section>
-    <div id="root"></div>
+
+    <section id="intro-holy" class="intro-holy-section">
+      <div class="intro-holy-divider"></div>
+      <p class="intro-holy-label">Introducing Holy</p>
+      <div class="intro-holy-text-wrap">
+        <p class="intro-holy-text" id="introHolyText"><span class="intro-typing-cursor"></span></p>
+      </div>
+      <a href="https://discord.gg/wRZTDBkmbh" target="_blank" rel="noopener noreferrer" class="intro-holy-join-btn"
+        id="introHolyJoinBtn">JOIN US!</a>
+    </section>
+
+    <section id="members-section" class="members-section">
+      <div class="members-header">
+        <div class="members-label">— MEMBERS —</div>
+      </div>
+
+      <div class="drac-grid" id="membersContainer"></div>
+    </section>
+
+    <section id="archives-section" class="archives-section">
+      <div class="archives-header">
+        <div class="archives-label">— ARCHIVES —</div>
+      </div>
+      <div class="archives-grid" id="archivesGrid">
+        <a href="https://www.youtube.com/watch?v=uspKnn--C2c" target="_blank" rel="noopener noreferrer"
+          class="archive-card archive-reveal" data-index="0">
+          <div class="archive-thumb-box">
+            <img class="archive-thumb-img" src="https://img.youtube.com/vi/uspKnn--C2c/maxresdefault.jpg"
+              onerror="this.src='thumbnails/uspKnn--C2c.jpg'" alt="Demonyong hinudas" loading="lazy" />
+            <div class="archive-thumb-overlay"></div>
+            <div class="archive-play-btn">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="archive-meta">
+            <div class="archive-author-avatar">
+              <img src="https://i.pinimg.com/736x/98/0b/3f/980b3feb6eb5d22fd47dcca48b747cab.jpg" alt="xen" />
+            </div>
+            <span class="archive-author-name">xen</span>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=SykDX7Lx7bU" target="_blank" rel="noopener noreferrer"
+          class="archive-card archive-reveal" data-index="1">
+          <div class="archive-thumb-box">
+            <img class="archive-thumb-img" src="https://img.youtube.com/vi/SykDX7Lx7bU/maxresdefault.jpg"
+              onerror="this.src='thumbnails/SykDX7Lx7bU.jpg'" alt="simpleng tao lang" loading="lazy" />
+            <div class="archive-thumb-overlay"></div>
+            <div class="archive-play-btn">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="archive-meta">
+            <div class="archive-author-avatar">
+              <img src="https://i.pinimg.com/736x/98/0b/3f/980b3feb6eb5d22fd47dcca48b747cab.jpg" alt="xen" />
+            </div>
+            <span class="archive-author-name">xen</span>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=UUor4lxMu8s" target="_blank" rel="noopener noreferrer"
+          class="archive-card archive-reveal" data-index="2">
+          <div class="archive-thumb-box">
+            <img class="archive-thumb-img" src="https://img.youtube.com/vi/UUor4lxMu8s/maxresdefault.jpg"
+              onerror="this.src='thumbnails/UUor4lxMu8s.jpg'" alt="Iba talaga pag 4luv" loading="lazy" />
+            <div class="archive-thumb-overlay"></div>
+            <div class="archive-play-btn">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="archive-meta">
+            <div class="archive-author-avatar">
+              <img src="https://i.pinimg.com/736x/98/0b/3f/980b3feb6eb5d22fd47dcca48b747cab.jpg" alt="xen" />
+            </div>
+            <span class="archive-author-name">xen</span>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=_7d6P4POdU4" target="_blank" rel="noopener noreferrer"
+          class="archive-card archive-reveal" data-index="3">
+          <div class="archive-thumb-box">
+            <img class="archive-thumb-img" src="https://img.youtube.com/vi/_7d6P4POdU4/maxresdefault.jpg"
+              onerror="this.src='thumbnails/_7d6P4POdU4.jpg'" alt="wala lang" loading="lazy" />
+            <div class="archive-thumb-overlay"></div>
+            <div class="archive-play-btn">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="archive-meta">
+            <div class="archive-author-avatar">
+              <img src="https://i.pinimg.com/736x/98/0b/3f/980b3feb6eb5d22fd47dcca48b747cab.jpg" alt="xen" />
+            </div>
+            <span class="archive-author-name">xen</span>
+          </div>
+        </a>
+      </div>
+    </section>
   </div>
 
-  <div id="profileView" style="display: none;">
-    <div class="profile-view-container up">
-      <button class="back-btn" onclick="exitProfileView()">← Return to lobby</button>
-      <div id="profileContent"></div>
-    </div>
-  </div>
+  <script>
+    (function () {
+      const canvas = document.getElementById('particles');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
 
-  <div id="metricsPanel" class="metrics-footer-panel up" style="display: flex;">
-    <div class="metrics-item">
-      <span>Views:</span>
-      <span id="sessionViewsCounter">0</span>
-    </div>
-    <div class="metrics-divider"></div>
-    <div class="metrics-item">
-      <button class="like-button-action" id="likeButtonAction" aria-label="Like this site">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
-        </svg>
-        <span id="likeButtonText">Like</span>
-      </button>
-      <span>(<span id="likeCountDisplay">0</span>)</span>
-    </div>
-  </div>
+      const particles = [];
+      for (let i = 0; i < 80; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: Math.random() * 2 + 1,
+          speedX: (Math.random() - 0.5) * 0.5,
+          speedY: (Math.random() - 0.5) * 0.5,
+          opacity: Math.random() * 0.5 + 0.2
+        });
+      }
 
-</main>
+      function drawParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+          p.x += p.speedX;
+          p.y += p.speedY;
+          if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+          if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255,255,255,${p.opacity})`;
+          ctx.fill();
+        });
+        requestAnimationFrame(drawParticles);
+      }
+      drawParticles();
 
-<script>
-  const dabestinthewrld = {
-    theHolyOnes: [
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      });
+    })();
+
+    (function () {
+      const asciiEl = document.getElementById("ascii-text");
+      const finalArt =
+        "  ⠀⢀⡠⠤⠔⢲⢶⡖⠒⠤⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n" +
+        "⠀⠀⣠⡚⠁⢀⠀⠀⢄⢻⣿⠀⠀⠀⡙⣷⢤⡀⠀⠀⠀⠀⠀⠀\n" +
+        "⠀⡜⢱⣇⠀⣧⢣⡀⠀⡀⢻⡇⠀⡄⢰⣿⣷⡌⣢⡀⠀⠀⠀⠀\n" +
+        "⠸⡇⡎⡿⣆⠹⣷⡹⣄⠙⣽⣿⢸⣧⣼⣿⣿⣿⣶⣼⣆⠀⠀⠀\n" +
+        "⣷⡇⣷⡇⢹⢳⡽⣿⡽⣷⡜⣿⣾⢸⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀\n" +
+        "⣿⡇⡿⣿⠀⠣⠹⣾⣿⣮⠿⣞⣿⢸⣿⣛⢿⣿⡟⠯⠉⠙⠛⠓\n" +
+        "⣿⣇⣷⠙⡇⠀⠁⠀⠉⣽⣷⣾⢿⢸⣿⠀⢸⣿⢿⠀⠀⠀⠀⠀\n" +
+        "⡟⢿⣿⣷⣾⣆⠀⠀⠘⠘⠿⠛⢸⣼⣿⢖⣼⣿⠘⡆⠀⠀⠀⠀\n" +
+        "⠃⢸⣿⣿⡘⠋⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⡆⠇⠀⠀⠀⠀\n" +
+        "⠀⢸⡿⣿⣇⠀⠈⠀⠤⠀⠀⢀⣿⣿⣿⣿⣿⣿⣧⢸⠀⠀⠀⠀\n" +
+        "⠀⠈⡇⣿⣿⣷⣤⣀⠀⣀⠔⠋⣿⣿⣿⣿⣿⡟⣿⡞⡄⠀⠀⠀\n" +
+        "⠀⠀⢿⢸⣿⣿⣿⣿⣿⡇⠀⢠⣿⡏⢿⣿⣿⡇⢸⣇⠇⠀⠀⠀\n" +
+        "⠀⠀⢸⡏⣿⣿⣿⠟⠋⣀⠠⣾⣿⠡⠀⢉⢟⠷⢼⣿⣿⠀⠀⠀\n" +
+        "⠀⠀⠈⣷⡏⡱⠁⠀⠊⠀⠀⣿⣏⣀⡠⢣⠃⠀⠀⢹⣿⡄⠀⠀\n" +
+        "⠀⠀⠘⢼⣿⠀⢠⣤⣀⠉⣹⡿⠀⠁⠀⡸⠀⠀⠀⠈⣿⡇";
+
+      let currentDisplayState = Array(finalArt.length).fill(" ");
+      for (let i = 0; i < finalArt.length; i++) {
+        if (finalArt[i] === "\n") currentDisplayState[i] = "\n";
+      }
+
+      let executableTargets = [];
+      for (let i = 0; i < finalArt.length; i++) {
+        if (finalArt[i] !== " " && finalArt[i] !== "\n") executableTargets.push(i);
+      }
+
+      for (let i = executableTargets.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [executableTargets[i], executableTargets[j]] = [executableTargets[j], executableTargets[i]];
+      }
+
+      const frameTimeBudget = 1800;
+      const trackingLength = executableTargets.length;
+      const delayStep = frameTimeBudget / trackingLength;
+      let currentPointer = 0;
+      const progressFill = document.getElementById('intro-progress-fill');
+
+      function runArtGenerationLoop() {
+        if (currentPointer < trackingLength) {
+          const structuralIndex = executableTargets[currentPointer];
+          currentDisplayState[structuralIndex] = finalArt[structuralIndex];
+          asciiEl.textContent = currentDisplayState.join("");
+          if (progressFill) progressFill.style.width = `${(currentPointer / trackingLength) * 100}%`;
+          currentPointer++;
+          setTimeout(runArtGenerationLoop, delayStep);
+        } else {
+          setTimeout(() => {
+            const overlay = document.getElementById("intro-overlay");
+            const mainContent = document.getElementById("main-content");
+            overlay.style.opacity = "0";
+            overlay.style.visibility = "hidden";
+            setTimeout(() => { mainContent.style.opacity = "1"; }, 300);
+          }, 500);
+        }
+      }
+      runArtGenerationLoop();
+    })();
+
+    (function () {
+      const subtitle = document.querySelector('header p');
+      const text = subtitle.textContent;
+      subtitle.textContent = '';
+      let index = 0;
+
+      function typeHeader() {
+        if (index < text.length) {
+          subtitle.textContent += text.charAt(index);
+          index++;
+          setTimeout(typeHeader, 50);
+        }
+      }
+
+      setTimeout(typeHeader, 2500);
+    })();
+
+    const MAIN_USER_IDS = [
       '1500506437519151207',
       '1488524196559458485',
       '1055696475914506331'
-    ],
-    pinagpala: [
-      '1461546126581960776',
-      '1386990072741761056',
-      '872499435945472081',
-      '1497283975444566116'
-    ],
-    imperialSexy: [
-      '1452324810574266470',
-      '784116937269575730',
-      '1440000744630780034',
-      '1397199429131305058',
-      '1362477649343283300',
-      '1352936210028560435'
-    ],
-    choosenOnes: [
-      '1315517676449300541',
-      '1521136418900938753',
-      '901259883607900252',
-      '1330507257577996331',
-      '1177598686944055368',
-      '1278228608074121307',
-      '1375174086229098690',
-      '1276210406880317522',
-      '1511751803753070736',
-      '1498048339995001042',
-      '1498649623772922021',
-      '1413034681498075246',
-      '1534578556737421523',
-      '1329496882229022771'
-    ],
-    members: [
-      '1169934007136432182',
-      '1410504862445080586',
-      '1385811616703971489',
-      '1342631893040107662',
-      '1272938103794962485',
-      '1501651881238466830',
-      '1354371930618073200',
-      '1456911181725040712',
-      '1241815433355722845'
-    ]
-  };
+    ];
 
-  const userSocialsMapping = {};
+    const MEMBERS_DATA = [
+      {
+        id: '872499435945472081',
+        name: 'LIA',
+        handle: '@whodfislia',
+        banner: 'https://file.garden/ap4ui2w7jS78a5tg/VID_20260703_030126_999.gif',
+        audio: 'https://file.garden/ap4ui2w7jS78a5tg/Lil%20Tjay%20-%20Sex%20Sounds%20(Official%20Video).mp3'
+      },
+      {
+        id: '1521625915900301525',
+        name: 'kirito',
+        handle: '@_hindiakoyon.',
+        banner: 'https://file.garden/ap4ui2w7jS78a5tg/kirito.gif',
+        audio: 'https://file.garden/ap4ui2w7jS78a5tg/Lana%20Del%20Rey%20-%20Young%20and%20Beautiful.mp3'
+      },
+      {
+        id: '937952428526018590',
+        name: 'XEA',
+        handle: '@heartcamm_',
+        banner: 'https://file.garden/ap4ui2w7jS78a5tg/vzxb.jpg',
+        audio: 'https://file.garden/ap4ui2w7jS78a5tg/SZA%20-%20Diamond%20Boy%20(DTM)%20%5BOfficial%20Audio%5D.mp3'
+      },
+      {
+        id: '1428818033471918271',
+        name: 'YUNO',
+        handle: '@clbyno',
+        banner: 'https://file.garden/ap4ui2w7jS78a5tg/yno.jpg',
+        audio: 'https://file.garden/ap4ui2w7jS78a5tg/Ryouji%20-%20Lonely%20Nights%20(Official%20Lyric%20Video).mp3'
+      },
+      {
+        id: '1447468314359238678',
+        name: 'YASHID',
+        handle: '@badtothebxnemf',
+        banner: 'https://file.garden/ap4ui2w7jS78a5tg/bxcvb.gif',
+        audio: 'https://file.garden/ap4ui2w7jS78a5tg/Sica%20-%20PERSIAN%20RAGZ%20(Official%20Lyric%20Video).mp3'
+      },
+      {
+        id: '1259085349989384315',
+        name: 'CHA',
+        handle: '@pndqwe',
+        banner: 'https://file.garden/ap4ui2w7jS78a5tg/chad.gif',
+        audio: 'https://file.garden/ap4ui2w7jS78a5tg/TBH.mp3'
+      },
+      {
+        id: '1505237130245312654',
+        name: 'NATOY',
+        handle: '@asiannatoy',
+        banner: 'https://file.garden/ap4ui2w7jS78a5tg/FDSV.jpg',
+        audio: 'https://file.garden/ap4ui2w7jS78a5tg/kayat%20rap%20bisaya%20lyrics.mp3'
+      },
+      {
+        id: '1508161709381128232',
+        name: 'SIKATA',
+        handle: '@sikata',
+        banner: 'https://file.garden/ap4ui2w7jS78a5tg/SDF.gif',
+        audio: 'https://file.garden/ap4ui2w7jS78a5tg/kayat%20rap%20bisaya%20lyrics.mp3'
+      },
+      {
+        id: '1440000744630780034',
+        name: 'ZHO',
+        handle: '@ic4unic.',
+        banner: 'https://file.garden/ap4ui2w7jS78a5tg/vcxnbn.gif',
+        audio: 'https://file.garden/ap4ui2w7jS78a5tg/MATIKAS.mp3'
+      },
+      {
+        id: '1253704304519417889',
+        name: 'REGRETS',
+        handle: '@zrtrcs.',
+        banner: 'https://i.pinimg.com/originals/3f/7a/f8/3f7af8b97413964df82f69bfea89a19c.gif',
+        audio: 'https://file.garden/aiHY1T3Ry0Odnk8G/Hev%20Abi%20-%20MEDICAL.mp3'
+      }
+    ];
 
-  let globalDataStore = {};
-  let mouseTracker = { x: -1000, y: -1000 };
-  let savedLobbyScrollPosition = 0;
-  let profileViewUserId = null;
-  let globalAudioElement = null;
+    const USER_IDS = [...new Set([...MAIN_USER_IDS, ...MEMBERS_DATA.map(m => m.id)])];
 
-  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+    const CUSTOM_BANNERS = {
+      '1500506437519151207': 'https://i.pinimg.com/originals/ce/11/7c/ce117cc24180effeaaa12a0f23d946f8.gif',
+      '1488524196559458485': 'https://i.pinimg.com/originals/1c/f1/7f/1cf17f9c3766a1f8d8b75d7056d7ca82.gif',
+      '1055696475914506331': 'https://file.garden/ap4ui2w7jS78a5tg/From%20Klickpin.com-%20Love%20this%20guide%20to%20dreamy%20flower%20bed%20ideas%20everyone%20will%20ask%20you%20about%20using%20simple%20ideas%20you%20can%20actually%20pull%20off%20and%20turn%20si.gif',
+      '872499435945472081': 'https://file.garden/ap4ui2w7jS78a5tg/VID_20260703_030126_999.gif',
+      '1521625915900301525': 'https://file.garden/ap4ui2w7jS78a5tg/kirito.gif',
+      '937952428526018590': 'https://file.garden/ap4ui2w7jS78a5tg/vzxb.jpg',
+      '1428818033471918271': 'https://file.garden/ap4ui2w7jS78a5tg/yno.jpg',
+      '1447468314359238678': 'https://file.garden/ap4ui2w7jS78a5tg/bxcvb.gif',
+      '1259085349989384315': 'https://file.garden/ap4ui2w7jS78a5tg/chad.gif',
+      '1505237130245312654': 'https://file.garden/ap4ui2w7jS78a5tg/FDSV.jpg',
+      '1508161709381128232': 'https://file.garden/ap4ui2w7jS78a5tg/SDF.gif',
+      '1440000744630780034': 'https://file.garden/ap4ui2w7jS78a5tg/vcxnbn.gif',
+      '1253704304519417889': 'https://i.pinimg.com/originals/3f/7a/f8/3f7af8b97413964df82f69bfea89a19c.gif'
+    };
 
-  const backgroundConfig = {
-    imageUrl: 'https://i.pinimg.com/736x/f1/c1/4d/f1c14dcfd51bde16abb8c6fdc6617f43.jpg',
-    blurAmount: '0.98px',
-    tintOpacity: 0.5
-  };
-  const setupBackground = () => {
-    const target = document.getElementById('bgTarget');
-    if (backgroundConfig.imageUrl && backgroundConfig.imageUrl.trim() !== '') {
-      target.style.backgroundImage = `linear-gradient(rgba(0,0,0,${backgroundConfig.tintOpacity}), rgba(0,0,0,${backgroundConfig.tintOpacity})), url('${backgroundConfig.imageUrl}')`;
-      target.style.filter = `blur(${backgroundConfig.blurAmount})`;
+    const USER_AUDIO = {
+      '1500506437519151207': 'https://file.garden/aiHY1T3Ry0Odnk8G/devobadoy.mp3',
+      '1488524196559458485': 'https://file.garden/aiHY1T3Ry0Odnk8G/pogi%20langx.mp3',
+      '1055696475914506331': 'https://file.garden/aiHY1T3Ry0Odnk8G/trevxxxw.mp3',
+      '872499435945472081': 'https://file.garden/ap4ui2w7jS78a5tg/Lil%20Tjay%20-%20Sex%20Sounds%20(Official%20Video).mp3',
+      '1521625915900301525': 'https://file.garden/ap4ui2w7jS78a5tg/Lana%20Del%20Rey%20-%20Young%20and%20Beautiful.mp3',
+      '937952428526018590': 'https://file.garden/ap4ui2w7jS78a5tg/SZA%20-%20Diamond%20Boy%20(DTM)%20%5BOfficial%20Audio%5D.mp3',
+      '1428818033471918271': 'https://file.garden/ap4ui2w7jS78a5tg/Ryouji%20-%20Lonely%20Nights%20(Official%20Lyric%20Video).mp3',
+      '1447468314359238678': 'https://file.garden/ap4ui2w7jS78a5tg/Sica%20-%20PERSIAN%20RAGZ%20(Official%20Lyric%20Video).mp3',
+      '1259085349989384315': 'https://file.garden/ap4ui2w7jS78a5tg/TBH.mp3',
+      '1505237130245312654': 'https://file.garden/ap4ui2w7jS78a5tg/kayat%20rap%20bisaya%20lyrics.mp3',
+      '1508161709381128232': 'https://file.garden/ap4ui2w7jS78a5tg/kayat%20rap%20bisaya%20lyrics.mp3',
+      '1440000744630780034': 'https://file.garden/ap4ui2w7jS78a5tg/MATIKAS.mp3',
+      '1253704304519417889': 'https://file.garden/aiHY1T3Ry0Odnk8G/Hev%20Abi%20-%20MEDICAL.mp3'
+    };
+
+    const userLiveLoaded = {};
+
+    function getDiscordAvatarUrl(user) {
+      if (!user) return 'https://cdn.discordapp.com/embed/avatars/0.png';
+      if (user.avatar) {
+        const ext = user.avatar.startsWith('a_') ? 'gif' : 'png';
+        return `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.${ext}?size=256`;
+      }
+      const disc = user.discriminator;
+      if (disc && disc !== '0') {
+        return `https://cdn.discordapp.com/embed/avatars/${parseInt(disc) % 5}.png`;
+      }
+      try {
+        return `https://cdn.discordapp.com/embed/avatars/${Number((BigInt(user.id) >> 22n) % 6n)}.png`;
+      } catch (e) {
+        return 'https://cdn.discordapp.com/embed/avatars/0.png';
+      }
     }
-  };
-  setupBackground();
 
-  (function initLightning() {
-    const canvas = document.getElementById('lightningCanvas');
-    const flash = document.getElementById('lightningTarget');
-    const bg = document.getElementById('bgTarget');
-    if (!canvas || !flash || !bg) return;
-    const ctx = canvas.getContext('2d');
-    let bolts = [];
-    let isStriking = false;
-
-    const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
-    window.addEventListener('resize', resize, { passive: true });
-    resize();
-
-    const genSegments = (x1, y1, x2, y2, disp, minLen = 8) => {
-      let segs = [];
-      const rec = (a, b, c, d, dp) => {
-        const dx = c - a, dy = d - b;
-        const dist = Math.sqrt(dx*dx + dy*dy);
-        if (dist < minLen) { segs.push({ x1:a, y1:b, x2:c, y2:d }); return; }
-        let mx = (a+c)/2, my = (b+d)/2;
-        mx += (Math.random()-0.5)*dp;
-        my += (Math.random()-0.5)*dp;
-        rec(a, b, mx, my, dp*0.55);
-        rec(mx, my, c, d, dp*0.55);
+    const FALLBACK_MEMBERS = {};
+    MEMBERS_DATA.forEach(m => {
+      let defaultAvatar = 'https://cdn.discordapp.com/embed/avatars/0.png';
+      try {
+        defaultAvatar = `https://cdn.discordapp.com/embed/avatars/${Number((BigInt(m.id) >> 22n) % 6n)}.png`;
+      } catch (e) { }
+      FALLBACK_MEMBERS[m.id] = {
+        name: m.name,
+        handle: m.handle,
+        avatar: defaultAvatar,
+        status: 'offline'
       };
-      rec(x1, y1, x2, y2, disp);
-      return segs;
-    };
-
-    const createBolt = () => {
-      const edge = ['top','bottom','left','right'][Math.floor(Math.random()*4)];
-      let sx, sy;
-      if (edge === 'top') { sx = Math.random()*canvas.width; sy = 0; }
-      else if (edge === 'bottom') { sx = Math.random()*canvas.width; sy = canvas.height; }
-      else if (edge === 'left') { sx = 0; sy = Math.random()*canvas.height; }
-      else { sx = canvas.width; sy = Math.random()*canvas.height; }
-      const tx = canvas.width*0.3 + Math.random()*canvas.width*0.4;
-      const ty = canvas.height*0.3 + Math.random()*canvas.height*0.4;
-      let main = genSegments(sx, sy, tx, ty, 140);
-      let branches = [];
-      main.forEach((s, i) => {
-        if (i>0 && i%4===0 && Math.random()<0.35) {
-          const bx = (Math.random()-0.5)*160, by = (Math.random()-0.5)*160;
-          branches.push(genSegments(s.x1, s.y1, s.x1+bx, s.y1+by, 40));
-        }
-      });
-      return { main, branches, opacity: 1.0 };
-    };
-
-    const drawBolt = (b) => {
-      ctx.save();
-      ctx.strokeStyle = '#fff';
-      ctx.shadowColor = 'oklch(0.60 0.25 25)';
-      ctx.shadowBlur = 24;
-      ctx.lineWidth = Math.random()*2 + 1.8;
-      ctx.globalAlpha = b.opacity;
-      const drawSegs = (segs) => { if(!segs.length) return; ctx.beginPath(); ctx.moveTo(segs[0].x1, segs[0].y1); segs.forEach(s=>ctx.lineTo(s.x2,s.y2)); ctx.stroke(); };
-      drawSegs(b.main);
-      ctx.lineWidth *= 0.5;
-      ctx.shadowBlur = 12;
-      b.branches.forEach(br=>drawSegs(br));
-      ctx.restore();
-    };
-
-    let animId = null;
-    const render = () => {
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      if (bolts.length) {
-        bolts.forEach(b=>drawBolt(b));
-        bolts = bolts.filter(b=> (b.opacity -= 0.08) > 0 );
-        animId = requestAnimationFrame(render);
-      } else {
-        isStriking = false;
-        if (animId) { cancelAnimationFrame(animId); animId = null; }
-      }
-    };
-
-    const strike = () => {
-      if (isStriking) return;
-      isStriking = true;
-      const ambient = Math.random() > 0.4 ? 0.18 : 0.15;
-      const hold = Math.random() > 0.4 ? 50 : 40;
-      bolts.push(createBolt());
-      flash.style.opacity = ambient;
-      bg.style.filter = `blur(${backgroundConfig.blurAmount}) brightness(1.7) contrast(1.2)`;
-      setTimeout(() => {
-        flash.style.opacity = '0';
-        bg.style.filter = `blur(${backgroundConfig.blurAmount})`;
-      }, hold);
-      render();
-      setTimeout(() => { strike(); }, Math.floor(Math.random()*8000)+4000);
-    };
-    setTimeout(strike, 1500);
-  })();
-
-  (function initParticles() {
-    const canvas = document.getElementById('bgParticles');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let parts = [];
-    const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
-    window.addEventListener('resize', resize, { passive: true });
-    resize();
-    class Particle {
-      constructor() {
-        this.x = Math.random()*canvas.width;
-        this.y = Math.random()*canvas.height;
-        this.base = Math.random()*1.5 + 0.5;
-        this.size = this.base;
-        this.vx = (Math.random()-0.5)*0.4;
-        this.vy = (Math.random()-0.5)*0.4;
-        this.alpha = Math.random()*0.5 + 0.15;
-      }
-      draw() {
-        ctx.fillStyle = `rgba(235,235,245,${this.alpha})`;
-        ctx.beginPath(); ctx.arc(this.x,this.y,this.size,0,Math.PI*2); ctx.fill();
-      }
-      update() {
-        this.x += this.vx; this.y += this.vy;
-        const dx = mouseTracker.x - this.x;
-        const dy = mouseTracker.y - this.y;
-        const dist = dx*dx + dy*dy;
-        if (dist < 14400) {
-          const f = (14400 - dist) / 14400;
-          this.x -= (dx/10)*f; this.y -= (dy/10)*f;
-          this.size = this.base * (1 + f*0.8);
-        } else { this.size = this.base; }
-        if (this.x<0 || this.x>canvas.width) this.vx *= -1;
-        if (this.y<0 || this.y>canvas.height) this.vy *= -1;
-      }
-    }
-    const init = () => {
-      parts = [];
-      const count = Math.min(80, Math.floor((canvas.width*canvas.height)/20000));
-      for (let i=0; i<count; i++) parts.push(new Particle());
-    };
-    init();
-    const loop = () => {
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      parts.forEach(p=>{ p.update(); p.draw(); });
-      requestAnimationFrame(loop);
-    };
-    loop();
-  })();
-
-  (function hideLoading() {
-    const screen = document.getElementById('loadingScreen');
-    if (screen) {
-      screen.style.opacity = '0';
-      screen.style.transform = 'scale(1.02) translate3d(0,0,0)';
-      screen.style.pointerEvents = 'none';
-      setTimeout(() => screen.remove(), 600);
-    }
-    document.body.classList.remove('loading-locked');
-    document.body.classList.add('site-loaded');
-  })();
-
-  const musicConfig = {
-    tuswrldmusic: [
-      'https://file.garden/aN0Uo2YmaWI-OmAY/Hev%20Abi%20-%20molly%20to%20the%20head%20freestyle.mp3'
-    ],
-    volume: 0.4
-  };
-  (function setupMusic() {
-    const tracks = musicConfig.tuswrldmusic;
-    if (!tracks || !tracks.length) return;
-    const audio = document.createElement('audio');
-    audio.volume = musicConfig.volume;
-    audio.autoplay = true;
-    audio.loop = false;
-    audio.muted = true;
-    audio.playsInline = true;
-    audio.preload = 'auto';
-    audio.src = tracks[0];
-    audio.style.display = 'none';
-    document.body.appendChild(audio);
-    globalAudioElement = audio;
-    let scrollTriggeredAudio = false;
-    const playOnScroll = () => {
-      if (scrollTriggeredAudio) return;
-      scrollTriggeredAudio = true;
-      audio.muted = false;
-      audio.play().catch(() => {});
-      window.removeEventListener('scroll', playOnScroll, { passive: true });
-    };
-    window.addEventListener('scroll', playOnScroll, { passive: true });
-    audio.addEventListener('canplay', () => { audio.play().catch(() => {}); });
-    audio.play().catch(() => {});
-  })();
-
-  (function initMetrics() {
-    const viewsEl = document.getElementById('sessionViewsCounter');
-    const likeBtn = document.getElementById('likeButtonAction');
-    const likeTxt = document.getElementById('likeButtonText');
-    const likeCountEl = document.getElementById('likeCountDisplay');
-
-    let views = parseInt(localStorage.getItem('tuswrld_views') || '0');
-    if (!sessionStorage.getItem('tuswrld_visited')) {
-      views += 1;
-      localStorage.setItem('tuswrld_views', views);
-      sessionStorage.setItem('tuswrld_visited', 'true');
-    }
-    if (viewsEl) viewsEl.innerText = views.toLocaleString();
-
-    let likes = parseInt(localStorage.getItem('tuswrld_likes') || '0');
-    if (likeCountEl) likeCountEl.innerText = likes.toLocaleString();
-
-    if (!likeBtn.dataset.listenerAttached) {
-      likeBtn.addEventListener('click', () => {
-        if (localStorage.getItem('tuswrld_liked') !== 'true') {
-          likes += 1;
-          localStorage.setItem('tuswrld_liked', 'true');
-          localStorage.setItem('tuswrld_likes', likes);
-          likeBtn.classList.add('is-active');
-          likeTxt.innerText = 'Liked';
-          if (likeCountEl) likeCountEl.innerText = likes.toLocaleString();
-        }
-      });
-      likeBtn.dataset.listenerAttached = 'true';
-    }
-    if (localStorage.getItem('tuswrld_liked') === 'true') {
-      likeBtn.classList.add('is-active');
-      likeTxt.innerText = 'Liked';
-    }
-  })();
-
-  const viewUserProfileDirectory = (userId) => {
-    savedLobbyScrollPosition = window.scrollY || window.pageYOffset;
-    profileViewUserId = userId;
-    toggleAppView('profile');
-  };
-  const exitProfileView = () => {
-    profileViewUserId = null;
-    toggleAppView('lobby');
-  };
-
-  const renderProfileViewContent = (userId) => {
-    const container = document.getElementById('profileContent');
-    const userData = globalDataStore[userId];
-    if (!userData) {
-      container.innerHTML = `<div class="profile-card"><div class="profile-name">User Not Found</div></div>`;
-      return;
-    }
-    const u = userData.discord_user;
-    const displayName = u.global_name || u.username || 'Unknown';
-    const status = userData.discord_status || 'offline';
-    let avatarUrl = 'https://cdn.discordapp.com/embed/avatars/0.png';
-    if (u.avatar) avatarUrl = `https://cdn.discordapp.com/avatars/${userId}/${u.avatar}.${u.avatar.startsWith('a_')?'gif':'webp'}?size=256`;
-    let decoUrl = u.avatar_decoration_data ? `https://cdn.discordapp.com/avatar-decoration-presets/${u.avatar_decoration_data.asset}.png` : '';
-    let customStatus = 'No custom status set';
-    if (userData.activities) {
-      const act = userData.activities.find(a => a.type === 4);
-      if (act && act.state) customStatus = act.state;
-    }
-
-    const statusLabels = { online: 'Online', idle: 'Idle', dnd: 'Do Not Disturb', offline: 'Offline' };
-
-    container.innerHTML = `
-      <div class="profile-card">
-        <div class="ava-large">
-          <img class="avatar" src="${avatarUrl}" alt="${esc(displayName)}">
-          ${decoUrl ? `<img class="deco" src="${decoUrl}" alt="">` : ''}
-          <span class="dot ${status}"></span>
-        </div>
-        <div class="profile-info">
-          <h2 class="profile-name">${esc(displayName)}</h2>
-          <div class="profile-tag">@${esc(u.username)}</div>
-          <div class="profile-status"><span class="status-text ${status}">● ${statusLabels[status] || status}</span></div>
-        </div>
-        <div style="font-size:1.1rem;color:var(--fg);opacity:0.9;max-width:85%;line-height:1.6;font-style:italic;margin:1.2rem 0;text-align:center;">${esc(customStatus)}</div>
-      </div>
-    `;
-  };
-
-  const toggleAppView = (mode) => {
-    const lobby = document.getElementById('lobbyView');
-    const profile = document.getElementById('profileView');
-    const metrics = document.getElementById('metricsPanel');
-    if (mode === 'profile' && profileViewUserId) {
-      lobby.style.display = 'none';
-      if (metrics) metrics.style.display = 'none';
-      profile.style.display = 'block';
-      renderProfileViewContent(profileViewUserId);
-      window.scrollTo(0, 0);
-    } else {
-      profile.style.display = 'none';
-      lobby.style.display = 'block';
-      if (metrics) metrics.style.display = 'flex';
-      window.scrollTo(0, savedLobbyScrollPosition);
-    }
-  };
-
-  const createUserCardHTML = (userId, delay) => {
-    if (!userId) return '';
-    const data = globalDataStore[userId];
-    let displayName = 'Unknown', status = 'offline', avatarUrl = '', decoUrl = '', sub = 'offline';
-    if (data) {
-      const u = data.discord_user;
-      displayName = u.global_name || u.username || displayName;
-      status = data.discord_status || 'offline';
-      if (u.avatar) avatarUrl = `https://cdn.discordapp.com/avatars/${userId}/${u.avatar}.${u.avatar.startsWith('a_')?'gif':'webp'}?size=128`;
-      if (u.avatar_decoration_data) decoUrl = `https://cdn.discordapp.com/avatar-decoration-presets/${u.avatar_decoration_data.asset}.png`;
-      sub = status.toUpperCase();
-    }
-    const ava = avatarUrl ? `<img class="avatar" src="${avatarUrl}" alt="${esc(displayName)}" loading="lazy">` : `<div class="placeholder">${esc(displayName.charAt(0).toUpperCase())}</div>`;
-    return `<div class="card up js-glow-card js-tilt-card" onclick="viewUserProfileDirectory('${userId}')" style="animation-delay:${delay*25}ms">
-      <div class="ava">${ava}${decoUrl ? `<img class="deco" src="${decoUrl}" alt="">`:''}<span class="dot ${status}"></span></div>
-      <div class="meta"><div class="name">${esc(displayName)}</div><div class="role">${esc(sub)}</div></div>
-    </div>`;
-  };
-
-  const affiliates = [
-    { inviteCode: 'YpdPSxwgTn', fallbackName: '1luv', fallbackTag: '@mga pacute sa discord' },
-    { inviteCode: 'wfZmTnnPXu', fallbackName: 'Ascent', fallbackTag: '@Shop' },
-    { inviteCode: 'TgsASSxcS6', fallbackName: 'Hertz', fallbackTag: '@kucing' }
-  ];
-
-  const tuswrldbalagbag = async () => {
-    const root = document.getElementById('root');
-
-    const allIds = [
-      ...dabestinthewrld.theHolyOnes,
-      ...dabestinthewrld.pinagpala,
-      ...dabestinthewrld.imperialSexy,
-      ...dabestinthewrld.choosenOnes,
-      ...dabestinthewrld.members
-    ].filter(id => id && id.trim() !== '');
-
-    await Promise.all(allIds.map(id =>
-      fetch(`https://api.lanyard.rest/v1/users/${id}`)
-        .then(res => res.json())
-        .then(json => { if (json.success) globalDataStore[id] = json.data; })
-        .catch(() => {})
-    ));
-
-    let html = '';
-
-    html += `<section class="tier"><div class="tier-head"><h2>HOLYONES</h2></div><div class="grid-center">`;
-    dabestinthewrld.theHolyOnes.forEach((id, i) => { html += createUserCardHTML(id, i); });
-    html += `</div></section>`;
-
-    html += `<section class="tier"><div class="tier-head"><h2>PINAGPALA</h2></div><div class="grid-center">`;
-    dabestinthewrld.pinagpala.forEach((id, i) => { html += createUserCardHTML(id, i); });
-    html += `</div></section>`;
-
-    html += `<section class="tier"><div class="tier-head"><h2>IMPERIAL SEXY</h2></div><div class="ticker-container"><div class="ticker-track track-left">`;
-    const imp = dabestinthewrld.imperialSexy;
-    imp.forEach((id, i) => { html += createUserCardHTML(id, i); });
-    imp.forEach((id, i) => { html += createUserCardHTML(id, i + imp.length); });
-    html += `</div></div></section>`;
-
-    html += `<section class="tier"><div class="tier-head"><h2>CHOSEN ONES</h2></div><div class="ticker-container"><div class="ticker-track track-right">`;
-    const ch = dabestinthewrld.choosenOnes;
-    ch.forEach((id, i) => { html += createUserCardHTML(id, i); });
-    ch.forEach((id, i) => { html += createUserCardHTML(id, i + ch.length); });
-    html += `</div></div></section>`;
-
-    html += `<section class="tier"><div class="tier-head"><h2>MEMBERS</h2></div><div class="ticker-container"><div class="ticker-track track-right">`;
-    const mems = dabestinthewrld.members;
-    mems.forEach((id, i) => { html += createUserCardHTML(id, i); });
-    mems.forEach((id, i) => { html += createUserCardHTML(id, i + mems.length); });
-    html += `</div></div></section>`;
-
-    let affData = [];
-    try {
-      affData = await Promise.all(affiliates.map(aff => {
-        if (!aff.inviteCode) return Promise.resolve({ name: aff.fallbackName, tag: aff.fallbackTag, online: 0, iconUrl: null, invite: '#' });
-        return fetch(`https://discord.com/api/v9/invites/${aff.inviteCode.trim()}?with_counts=true`)
-          .then(res => res.json())
-          .then(data => {
-            let name = aff.fallbackName, tag = aff.fallbackTag, online = 0, iconUrl = null;
-            if (data && data.guild) {
-              name = data.guild.name || name;
-              tag = data.guild.description || tag;
-              online = data.approximate_presence_count || 0;
-              if (data.guild.icon) iconUrl = `https://cdn.discordapp.com/icons/${data.guild.id}/${data.guild.icon}.${data.guild.icon.startsWith('a_')?'gif':'png'}?size=128`;
-            }
-            return { name, tag, online, iconUrl, invite: `https://discord.gg/${aff.inviteCode.trim()}` };
-          }).catch(() => ({ name: aff.fallbackName, tag: aff.fallbackTag, online: 0, iconUrl: null, invite: `https://discord.gg/${aff.inviteCode.trim()}` }));
-      }));
-    } catch (e) { console.error(e); }
-
-    html += `<section class="tier"><div class="tier-head"><h2>AFFILIATES</h2></div><div class="grid-aff">`;
-    affData.forEach((a, i) => {
-      const visual = a.iconUrl ? `<img src="${a.iconUrl}" alt="" class="server-icon" loading="lazy">` : `<div class="aff-placeholder">${esc(a.name.charAt(0).toUpperCase())}</div>`;
-      html += `<a href="${a.invite}" target="_blank" rel="noopener" class="aff up js-glow-card js-tilt-card" style="animation-delay:${i*30}ms">
-        ${visual}<div class="info"><div class="n">${esc(a.name)}</div><div class="t">${esc(a.tag)}</div></div>
-        <div class="stat"><div class="row"><span class="pulse"></span>${a.online.toLocaleString()}</div><div class="lbl">online</div></div>
-      </a>`;
     });
-    html += `</div></section>`;
 
-    root.innerHTML = html;
+    const FALLBACK_STATUS = {};
 
-    let tick = false;
-    document.addEventListener('mousemove', e => {
-      mouseTracker.x = e.clientX; mouseTracker.y = e.clientY;
-      if (!tick) {
-        requestAnimationFrame(() => {
-          const cards = document.querySelectorAll('.js-glow-card');
-          cards.forEach(card => {
-            const r = card.getBoundingClientRect();
-            const x = e.clientX - r.left, y = e.clientY - r.top;
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
-            if (card.classList.contains('js-tilt-card') && x>=0 && y>=0 && x<=r.width && y<=r.height) {
-              const cx = r.width/2, cy = r.height/2;
-              card.style.transform = `perspective(600px) rotateX(${((y-cy)/cy)*-6}deg) rotateY(${((x-cx)/cx)*6}deg)`;
+    const SC = { online: 's-online', idle: 's-idle', dnd: 's-dnd', offline: 's-offline' };
+    const STATUS_LABELS = { online: 'ONLINE', idle: 'IDLE', dnd: 'DO NOT DISTURB', offline: 'OFFLINE' };
+
+    const userAudioElements = {};
+    let currentPlayingUserId = null;
+    let hoverLeaveTimeout = null;
+
+    let mainAudio = new Audio('https://file.garden/aiHY1T3Ry0Odnk8G/main.mp3');
+    mainAudio.loop = true;
+    mainAudio.preload = 'auto';
+    let isMainPlaying = false;
+
+    function initUserAudios() {
+      MAIN_USER_IDS.forEach(id => {
+        if (USER_AUDIO[id]) {
+          const a = new Audio(USER_AUDIO[id]);
+          a.loop = true;
+          a.preload = 'auto';
+          userAudioElements[id] = a;
+        }
+      });
+      MEMBERS_DATA.forEach(m => {
+        if (m.audio && !userAudioElements[m.id]) {
+          const a = new Audio(m.audio);
+          a.loop = true;
+          a.preload = 'auto';
+          userAudioElements[m.id] = a;
+        }
+      });
+    }
+    initUserAudios();
+
+    const toggleBtn = document.getElementById('musicToggle');
+
+    function setPlayingUI(playing) {
+      if (toggleBtn) {
+        if (playing) toggleBtn.classList.add('playing');
+        else toggleBtn.classList.remove('playing');
+      }
+    }
+
+    function playMainAudio() {
+      if (currentPlayingUserId && userAudioElements[currentPlayingUserId]) {
+        userAudioElements[currentPlayingUserId].pause();
+        currentPlayingUserId = null;
+      }
+      mainAudio.play()
+        .then(() => {
+          isMainPlaying = true;
+          setPlayingUI(true);
+        })
+        .catch(() => {});
+    }
+
+    function pauseMainAudio() {
+      mainAudio.pause();
+      isMainPlaying = false;
+      setPlayingUI(false);
+    }
+
+    function playAudioForUser(userId) {
+      if (hoverLeaveTimeout) {
+        clearTimeout(hoverLeaveTimeout);
+        hoverLeaveTimeout = null;
+      }
+
+      if (mainAudio && !mainAudio.paused) {
+        mainAudio.pause();
+        isMainPlaying = false;
+      }
+
+      if (currentPlayingUserId === userId && userAudioElements[userId] && !userAudioElements[userId].paused) {
+        return;
+      }
+
+      if (currentPlayingUserId && currentPlayingUserId !== userId) {
+        const prev = userAudioElements[currentPlayingUserId];
+        if (prev) prev.pause();
+      }
+
+      const audio = userAudioElements[userId];
+      if (!audio) return;
+
+      currentPlayingUserId = userId;
+      audio.play()
+        .then(() => {
+          setPlayingUI(true);
+        })
+        .catch(() => {});
+    }
+
+    function pauseAllAudio() {
+      if (currentPlayingUserId && userAudioElements[currentPlayingUserId]) {
+        userAudioElements[currentPlayingUserId].pause();
+        currentPlayingUserId = null;
+      }
+      pauseMainAudio();
+      setPlayingUI(false);
+    }
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (currentPlayingUserId && userAudioElements[currentPlayingUserId] && !userAudioElements[currentPlayingUserId].paused) {
+          pauseAllAudio();
+        } else if (currentPlayingUserId && userAudioElements[currentPlayingUserId]) {
+          userAudioElements[currentPlayingUserId].play().then(() => setPlayingUI(true)).catch(() => {});
+        } else if (mainAudio.paused) {
+          playMainAudio();
+        } else {
+          pauseMainAudio();
+        }
+      });
+    }
+
+    function unlockAudios() {
+      Object.values(userAudioElements).forEach(a => {
+        a.load();
+      });
+      mainAudio.load();
+      window.removeEventListener('click', unlockAudios);
+      window.removeEventListener('mousemove', unlockAudios);
+      window.removeEventListener('touchstart', unlockAudios);
+    }
+    window.addEventListener('click', unlockAudios, { passive: true });
+    window.addEventListener('mousemove', unlockAudios, { passive: true });
+    window.addEventListener('touchstart', unlockAudios, { passive: true });
+
+    const userCustomStatus = {};
+
+    function createCard(userId, index, isMember = false) {
+      const card = document.createElement('div');
+      card.className = isMember ? 'card member-card card-reveal' : 'card';
+      card.dataset.userId = userId;
+      card.dataset.index = index;
+      card.dataset.isMember = isMember ? 'true' : 'false';
+      card.dataset.audio = USER_AUDIO[userId] || '';
+      const bannerSrc = (typeof CUSTOM_BANNERS !== 'undefined' && CUSTOM_BANNERS[userId]) || '';
+      card.dataset.banner = bannerSrc;
+
+      card.addEventListener('mouseenter', () => {
+        const bg = document.getElementById('dracBannerBg');
+        const bSrc = card.dataset.banner || (typeof CUSTOM_BANNERS !== 'undefined' && CUSTOM_BANNERS[userId]);
+        if (bg && bSrc) {
+          bg.style.backgroundImage = `url('${bSrc}')`;
+          bg.style.opacity = '1';
+        }
+        playAudioForUser(userId);
+      });
+
+      card.addEventListener('mouseleave', () => {
+        const bg = document.getElementById('dracBannerBg');
+        if (bg) {
+          bg.style.opacity = '0';
+        }
+        if (hoverLeaveTimeout) clearTimeout(hoverLeaveTimeout);
+        hoverLeaveTimeout = setTimeout(() => {
+          if (currentPlayingUserId && userAudioElements[currentPlayingUserId]) {
+            userAudioElements[currentPlayingUserId].pause();
+            currentPlayingUserId = null;
+          }
+          playMainAudio();
+        }, 120);
+      });
+
+      card.innerHTML = `
+        <div class="card-banner-wrap" id="banner-${userId}">
+          ${bannerSrc ? `<img class="card-banner-img" src="${bannerSrc}" alt="banner" />` : `<div class="banner-placeholder"><i class="fas fa-image"></i></div>`}
+          <div class="card-banner-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="avatar-wrap">
+            <img class="avatar" id="avatar-${userId}" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="avatar" />
+            <img class="deco-img" id="deco-${userId}" style="display:none;" alt="decoration" />
+            <div class="status-dot s-offline" id="status-${userId}"></div>
+          </div>
+          <div class="card-name" id="name-${userId}">—</div>
+          
+          <div class="card-expanded-content" id="expanded-${userId}">
+            <div class="card-handle" id="handle-${userId}">@...</div>
+            
+            <div class="custom-status" id="cstatus-${userId}" style="display:none;">
+              <span id="customStatusEmoji-${userId}"></span>
+              <span class="status-text-content" id="customStatusText-${userId}"></span>
+              <span class="typing-cursor"></span>
+            </div>
+            
+            <div class="card-divider" id="cstatus-div-bottom-${userId}"></div>
+            
+            <div class="activity-section">
+              <div class="no-activity" id="no-activity-${userId}">No Current Activity</div>
+              <div class="spotify-widget" id="spwidget-${userId}" style="display:none;">
+                <img id="spart-${userId}" src="" alt="album" />
+                <div class="sp-track">
+                  <div class="sp-title" id="sptitle-${userId}">—</div>
+                  <div class="sp-artist" id="spartist-${userId}">—</div>
+                </div>
+                <i class="fab fa-spotify sp-icon"></i>
+              </div>
+              <div class="rpc-widget" id="rpcwidget-${userId}" style="display:none;">
+                <div class="rpc-asset-wrap" id="rpcasset-${userId}">
+                  <img class="rpc-large-img" id="rpclarge-${userId}" src="" alt="activity" />
+                  <div class="rpc-fallback-icon" id="rpcicon-${userId}" style="display:none;"><i class="fas fa-gamepad" id="rpcicon-i-${userId}"></i></div>
+                  <img class="rpc-small-img" id="rpcsmall-${userId}" src="" style="display:none;" alt="badge" />
+                </div>
+                <div class="rpc-details-col">
+                  <div class="rpc-header-label" id="rpcheader-${userId}">PLAYING</div>
+                  <div class="rpc-name" id="rpcname-${userId}">—</div>
+                  <div class="rpc-details-text" id="rpcdetails-${userId}"></div>
+                  <div class="rpc-state-text" id="rpcstate-${userId}"></div>
+                  <div class="rpc-elapsed" id="rpcelapsed-${userId}" style="display:none;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      return card;
+    }
+
+    function createDracCard(member, index) {
+      const card = document.createElement('div');
+      card.className = 'drac card-reveal';
+      card.dataset.userId = member.id;
+      card.dataset.index = index;
+      card.dataset.banner = member.banner || '';
+      card.dataset.audio = member.audio || '';
+
+      const bannerStyle = member.banner ? `background-image:url('${member.banner}');` : '';
+      let defaultAvatar = 'https://cdn.discordapp.com/embed/avatars/0.png';
+      try {
+        defaultAvatar = `https://cdn.discordapp.com/embed/avatars/${Number((BigInt(member.id) >> 22n) % 6n)}.png`;
+      } catch (e) { }
+
+      card.innerHTML = `
+        <div class="drac-banner" id="drac-banner-${member.id}" style="${bannerStyle}"></div>
+        <div class="drac-overlay"></div>
+        <div class="drac-content">
+          <div class="avatar-wrap">
+            <img class="avatar" id="avatar-${member.id}" src="${defaultAvatar}" alt="${member.name}" />
+            <img class="deco-img" id="deco-${member.id}" style="display:none;" alt="decoration" />
+            <div class="status-dot s-offline" id="status-${member.id}"></div>
+          </div>
+          <div class="info">
+            <h1 id="name-${member.id}">${member.name}</h1>
+            <p id="handle-${member.id}">${member.handle}</p>
+          </div>
+        </div>
+      `;
+
+      card.addEventListener('mouseenter', () => {
+        const bg = document.getElementById('dracBannerBg');
+        const b = card.dataset.banner || member.banner;
+        if (bg && b) {
+          bg.style.backgroundImage = `url('${b}')`;
+          bg.style.opacity = '1';
+        }
+        if (member.audio) {
+          playAudioForUser(member.id);
+        }
+      });
+
+      card.addEventListener('mouseleave', () => {
+        const bg = document.getElementById('dracBannerBg');
+        if (bg) {
+          bg.style.opacity = '0';
+        }
+        if (hoverLeaveTimeout) clearTimeout(hoverLeaveTimeout);
+        hoverLeaveTimeout = setTimeout(() => {
+          if (currentPlayingUserId && userAudioElements[currentPlayingUserId]) {
+            userAudioElements[currentPlayingUserId].pause();
+            currentPlayingUserId = null;
+          }
+          playMainAudio();
+        }, 150);
+      });
+
+      return card;
+    }
+
+    const typingIntervals = {};
+
+    function startTypingLoop(userId) {
+      if (typingIntervals[userId]) {
+        clearInterval(typingIntervals[userId]);
+        delete typingIntervals[userId];
+      }
+
+      const statusTextEl = document.getElementById(`customStatusText-${userId}`);
+      const emojiEl = document.getElementById(`customStatusEmoji-${userId}`);
+      if (!statusTextEl) return;
+
+      const statusData = userCustomStatus[userId];
+      if (!statusData || !statusData.text) {
+        const container = document.getElementById(`cstatus-${userId}`);
+        const divTop = document.getElementById(`cstatus-div-top-${userId}`);
+        if (container) container.style.display = 'none';
+        if (divTop) divTop.style.display = 'none';
+        return;
+      }
+
+      const container = document.getElementById(`cstatus-${userId}`);
+      const divTop = document.getElementById(`cstatus-div-top-${userId}`);
+      if (container) container.style.display = 'flex';
+      if (divTop) divTop.style.display = 'block';
+
+      const fullText = statusData.text;
+      const emoji = statusData.emoji || '';
+
+      if (emojiEl) {
+        if (emoji.startsWith('http') || emoji.includes('cdn.discordapp.com')) {
+          emojiEl.innerHTML = `<img class="status-emoji-img" src="${emoji}" alt="emoji" />`;
+        } else if (emoji) {
+          emojiEl.innerHTML = `<span class="status-emoji">${emoji}</span>`;
+        } else {
+          emojiEl.innerHTML = '';
+        }
+      }
+
+      let charIndex = 0;
+      let isDeleting = false;
+      let displayedText = '';
+
+      function typeStep() {
+        if (!statusTextEl) return;
+        if (!isDeleting) {
+          displayedText = fullText.substring(0, charIndex + 1);
+          charIndex++;
+          if (charIndex === fullText.length) {
+            isDeleting = true;
+            clearInterval(typingIntervals[userId]);
+            typingIntervals[userId] = setTimeout(() => {
+              typingIntervals[userId] = setInterval(typeStep, 50);
+            }, 3000);
+            statusTextEl.textContent = displayedText;
+            return;
+          }
+        } else {
+          displayedText = fullText.substring(0, charIndex - 1);
+          charIndex--;
+          if (charIndex === 0) {
+            isDeleting = false;
+            clearInterval(typingIntervals[userId]);
+            typingIntervals[userId] = setInterval(typeStep, 80);
+            statusTextEl.textContent = '';
+            return;
+          }
+        }
+        statusTextEl.textContent = displayedText;
+      }
+
+      typingIntervals[userId] = setInterval(typeStep, 80);
+    }
+
+    function applyUserData(data) {
+      if (!data || !data.discord_user) return;
+      const user = data.discord_user;
+      const userId = user.id;
+
+      const card = document.querySelector(`.card[data-user-id="${userId}"], .drac[data-user-id="${userId}"]`);
+      if (!card) return;
+
+      const bannerEl = document.getElementById(`banner-${userId}`);
+      const dracBannerEl = document.getElementById(`drac-banner-${userId}`);
+      const avatarEl = document.getElementById(`avatar-${userId}`);
+      const decoImg = document.getElementById(`deco-${userId}`);
+      const statusDot = document.getElementById(`status-${userId}`);
+      const nameEl = document.getElementById(`name-${userId}`);
+      const handleEl = document.getElementById(`handle-${userId}`);
+      const spWidget = document.getElementById(`spwidget-${userId}`);
+      const spArt = document.getElementById(`spart-${userId}`);
+      const spTitle = document.getElementById(`sptitle-${userId}`);
+      const spArtist = document.getElementById(`spartist-${userId}`);
+
+      const status = data.discord_status || 'offline';
+
+      const customBanner = CUSTOM_BANNERS[userId];
+      let bannerSrc = '';
+      if (customBanner) {
+        bannerSrc = customBanner;
+      } else if (user.banner) {
+        const bHash = user.banner;
+        bannerSrc = `https://cdn.discordapp.com/banners/${user.id}/${bHash}${bHash.startsWith('a_') ? '.gif' : '.png'}?size=600`;
+      }
+
+      if (bannerEl) {
+        if (bannerSrc) {
+          bannerEl.innerHTML = `<img class="card-banner-img" src="${bannerSrc}" alt="banner" /><div class="card-banner-overlay"></div>`;
+        } else {
+          bannerEl.innerHTML = `<div class="banner-placeholder"><i class="fas fa-image"></i></div><div class="card-banner-overlay"></div>`;
+        }
+      }
+      if (dracBannerEl && bannerSrc) {
+        dracBannerEl.style.backgroundImage = `url('${bannerSrc}')`;
+      }
+      if (bannerSrc) {
+        card.dataset.banner = bannerSrc;
+      }
+
+      const avatarUrl = getDiscordAvatarUrl(user);
+
+      if (avatarEl) {
+        if (avatarEl.tagName === 'IMG') {
+          avatarEl.src = avatarUrl;
+          avatarEl.onerror = () => {
+            let fallbackAvatar = 'https://cdn.discordapp.com/embed/avatars/0.png';
+            try {
+              fallbackAvatar = `https://cdn.discordapp.com/embed/avatars/${Number((BigInt(user.id) >> 22n) % 6n)}.png`;
+            } catch (e) { }
+            avatarEl.src = fallbackAvatar;
+          };
+        } else {
+          avatarEl.style.backgroundImage = `url('${avatarUrl}')`;
+        }
+      }
+
+      const decoAsset = user.avatar_decoration_data?.asset;
+      if (decoAsset) {
+        const decoUrl = `https://cdn.discordapp.com/avatar-decoration-presets/${decoAsset}.png?size=160&passthrough=true`;
+        decoImg.src = decoUrl;
+        decoImg.style.display = 'block';
+      } else {
+        decoImg.style.display = 'none';
+      }
+
+      if (statusDot) {
+        const sc = SC[status] || 's-offline';
+        statusDot.className = (statusDot.className || '').replace(/s-\w+/g, '').trim() + ' ' + sc;
+      }
+
+      const displayName = user.global_name || user.username;
+      if (nameEl) nameEl.textContent = displayName;
+      if (handleEl) handleEl.textContent = `@${user.username}`;
+
+      const customStatusAct = (data.activities || []).find(act => act.type === 4);
+      const fallback = FALLBACK_STATUS[userId];
+      const container = document.getElementById(`cstatus-${userId}`);
+      const divTop = document.getElementById(`cstatus-div-top-${userId}`);
+
+      let emojiStr = '';
+      let textStr = '';
+
+      if (customStatusAct && (customStatusAct.state || customStatusAct.emoji)) {
+        if (customStatusAct.emoji) {
+          if (customStatusAct.emoji.id) {
+            const ext = customStatusAct.emoji.animated ? 'gif' : 'png';
+            emojiStr = `https://cdn.discordapp.com/emojis/${customStatusAct.emoji.id}.${ext}?size=32`;
+          } else if (customStatusAct.emoji.name) {
+            emojiStr = customStatusAct.emoji.name;
+          }
+        }
+        if (customStatusAct.state) {
+          textStr = customStatusAct.state;
+        }
+      } else if (fallback) {
+        textStr = fallback.text || '';
+        emojiStr = fallback.emoji || '';
+      }
+
+      if (textStr || emojiStr) {
+        userCustomStatus[userId] = { emoji: emojiStr, text: textStr };
+        if (container) container.style.display = 'flex';
+        if (divTop) divTop.style.display = 'block';
+        startTypingLoop(userId);
+      } else {
+        userCustomStatus[userId] = null;
+        if (container) container.style.display = 'none';
+        if (divTop) divTop.style.display = 'none';
+        if (typingIntervals[userId]) {
+          clearInterval(typingIntervals[userId]);
+          delete typingIntervals[userId];
+        }
+      }
+
+      function getDiscordAssetUrl(applicationId, assetId) {
+        if (!assetId) return '';
+        if (assetId.startsWith('mp:')) {
+          return 'https://media.discordapp.net/' + assetId.replace(/^mp:\/?/, '');
+        }
+        if (assetId.startsWith('spotify:')) {
+          return 'https://i.scdn.co/image/' + assetId.replace('spotify:', '');
+        }
+        if (assetId.startsWith('http://') || assetId.startsWith('https://')) {
+          return assetId;
+        }
+        if (applicationId) {
+          return `https://cdn.discordapp.com/app-assets/${applicationId}/${assetId}.png`;
+        }
+        return '';
+      }
+
+      let spotifyAct = null;
+      let rpcAct = null;
+
+      (data.activities || []).forEach(act => {
+        if (act.type === 2 || act.id === 'spotify:1' || act.name === 'Spotify') {
+          spotifyAct = act;
+        } else if (act.type !== 4 && !rpcAct) {
+          rpcAct = act;
+        }
+      });
+
+      let spotifyData = null;
+      if (data.listening_to_spotify && data.spotify) {
+        spotifyData = {
+          art: data.spotify.album_art_url,
+          title: data.spotify.song || '—',
+          artist: data.spotify.artist || '—'
+        };
+      } else if (spotifyAct) {
+        const art = spotifyAct.assets?.large_image
+          ? getDiscordAssetUrl(spotifyAct.application_id, spotifyAct.assets.large_image)
+          : '';
+        spotifyData = {
+          art,
+          title: spotifyAct.details || '—',
+          artist: spotifyAct.state || '—'
+        };
+      }
+
+      const noActEl = document.getElementById(`no-activity-${userId}`);
+      const rpcWidget = document.getElementById(`rpcwidget-${userId}`);
+      const rpcLarge = document.getElementById(`rpclarge-${userId}`);
+      const rpcIcon = document.getElementById(`rpcicon-${userId}`);
+      const rpcIconI = document.getElementById(`rpcicon-i-${userId}`);
+      const rpcSmall = document.getElementById(`rpcsmall-${userId}`);
+      const rpcHeader = document.getElementById(`rpcheader-${userId}`);
+      const rpcName = document.getElementById(`rpcname-${userId}`);
+      const rpcDetails = document.getElementById(`rpcdetails-${userId}`);
+      const rpcState = document.getElementById(`rpcstate-${userId}`);
+      const rpcElapsed = document.getElementById(`rpcelapsed-${userId}`);
+
+      if (rpcAct) {
+        const largeImgUrl = getDiscordAssetUrl(rpcAct.application_id, rpcAct.assets?.large_image);
+        const smallImgUrl = getDiscordAssetUrl(rpcAct.application_id, rpcAct.assets?.small_image);
+
+        let typeLabel = 'PLAYING';
+        let fallbackIconClass = 'fas fa-gamepad';
+        const lowerName = (rpcAct.name || '').toLowerCase();
+        if (lowerName.includes('visual studio') || lowerName.includes('code')) {
+          typeLabel = 'CODING IN';
+          fallbackIconClass = 'fas fa-code';
+        } else if (rpcAct.type === 1) {
+          typeLabel = 'STREAMING';
+          fallbackIconClass = 'fas fa-video';
+        } else if (rpcAct.type === 3) {
+          typeLabel = 'WATCHING';
+          fallbackIconClass = 'fas fa-tv';
+        } else if (rpcAct.type === 5) {
+          typeLabel = 'COMPETING IN';
+          fallbackIconClass = 'fas fa-trophy';
+        }
+
+        if (rpcHeader) rpcHeader.textContent = typeLabel;
+        if (rpcName) rpcName.textContent = rpcAct.name || 'Activity';
+
+        if (rpcDetails) {
+          if (rpcAct.details) {
+            rpcDetails.textContent = rpcAct.details;
+            rpcDetails.style.display = 'block';
+          } else {
+            rpcDetails.style.display = 'none';
+          }
+        }
+
+        if (rpcState) {
+          if (rpcAct.state) {
+            rpcState.textContent = rpcAct.state;
+            rpcState.style.display = 'block';
+          } else {
+            rpcState.style.display = 'none';
+          }
+        }
+
+        if (rpcElapsed) {
+          if (rpcAct.timestamps?.start) {
+            const diffSec = Math.max(0, Math.floor((Date.now() - rpcAct.timestamps.start) / 1000));
+            const mins = Math.floor(diffSec / 60);
+            const secs = diffSec % 60;
+            const hrs = Math.floor(mins / 60);
+            const timeStr = hrs > 0
+              ? `${hrs}:${String(mins % 60).padStart(2, '0')}:${String(secs).padStart(2, '0')} elapsed`
+              : `${mins}:${String(secs).padStart(2, '0')} elapsed`;
+            rpcElapsed.textContent = `⏱ ${timeStr}`;
+            rpcElapsed.style.display = 'block';
+          } else {
+            rpcElapsed.style.display = 'none';
+          }
+        }
+
+        if (rpcLarge) {
+          if (largeImgUrl) {
+            rpcLarge.src = largeImgUrl;
+            rpcLarge.style.display = 'block';
+            rpcLarge.onerror = () => {
+              rpcLarge.style.display = 'none';
+              if (rpcIcon) rpcIcon.style.display = 'flex';
+            };
+            if (rpcIcon) rpcIcon.style.display = 'none';
+          } else {
+            rpcLarge.style.display = 'none';
+            if (rpcIcon) {
+              rpcIcon.style.display = 'flex';
+              if (rpcIconI) rpcIconI.className = fallbackIconClass;
+            }
+          }
+        }
+
+        if (rpcSmall) {
+          if (smallImgUrl) {
+            rpcSmall.src = smallImgUrl;
+            rpcSmall.style.display = 'block';
+            rpcSmall.onerror = () => { rpcSmall.style.display = 'none'; };
+          } else {
+            rpcSmall.style.display = 'none';
+          }
+        }
+
+        if (rpcWidget) rpcWidget.style.display = 'flex';
+        if (spWidget) spWidget.style.display = 'none';
+        if (noActEl) noActEl.style.display = 'none';
+      } else if (spotifyData && spotifyData.art) {
+        spArt.src = spotifyData.art;
+        spArt.onerror = () => { spArt.src = 'https://cdn.discordapp.com/embed/avatars/0.png'; };
+        spTitle.textContent = spotifyData.title;
+        spArtist.textContent = spotifyData.artist;
+        if (spWidget) spWidget.style.display = 'flex';
+        if (rpcWidget) rpcWidget.style.display = 'none';
+        if (noActEl) noActEl.style.display = 'none';
+      } else {
+        if (spWidget) spWidget.style.display = 'none';
+        if (rpcWidget) rpcWidget.style.display = 'none';
+        if (noActEl) noActEl.style.display = 'block';
+      }
+
+      userLiveLoaded[userId] = true;
+    }
+
+    function applyFallbackData(userId, fb) {
+      if (!fb || userLiveLoaded[userId]) return;
+      const bannerEl = document.getElementById(`banner-${userId}`);
+      const dracBannerEl = document.getElementById(`drac-banner-${userId}`);
+      const avatarEl = document.getElementById(`avatar-${userId}`);
+      const statusDot = document.getElementById(`status-${userId}`);
+      const nameEl = document.getElementById(`name-${userId}`);
+      const handleEl = document.getElementById(`handle-${userId}`);
+
+      const customBanner = CUSTOM_BANNERS[userId] || fb.banner;
+      if (customBanner) {
+        if (bannerEl) {
+          bannerEl.innerHTML = `<img class="card-banner-img" src="${customBanner}" alt="banner" /><div class="card-banner-overlay"></div>`;
+        }
+        if (dracBannerEl) {
+          dracBannerEl.style.backgroundImage = `url('${customBanner}')`;
+        }
+      }
+
+      if (avatarEl) {
+        if (avatarEl.tagName === 'IMG') {
+          if (fb.avatar) avatarEl.src = fb.avatar;
+        } else {
+          if (fb.avatar) avatarEl.style.backgroundImage = `url('${fb.avatar}')`;
+        }
+      }
+      if (nameEl && fb.name) nameEl.textContent = fb.name;
+      if (handleEl && fb.handle) handleEl.textContent = fb.handle;
+      if (statusDot && fb.status) {
+        statusDot.className = 'status-dot ' + (SC[fb.status] || 's-offline');
+      }
+
+      if (fb.customStatus && (fb.customStatus.text || fb.customStatus.emoji)) {
+        userCustomStatus[userId] = fb.customStatus;
+        const container = document.getElementById(`cstatus-${userId}`);
+        if (container) container.style.display = 'flex';
+        startTypingLoop(userId);
+      }
+    }
+
+    async function updateCard(userId) {
+      try {
+        const res = await fetch(`https://api.lanyard.rest/v1/users/${userId}`);
+        const json = await res.json();
+        if (json.success) {
+          applyUserData(json.data);
+          return;
+        }
+      } catch (err) {
+        console.error('lanyard error:', err);
+      }
+
+      if (!userLiveLoaded[userId] && FALLBACK_MEMBERS[userId]) {
+        applyFallbackData(userId, FALLBACK_MEMBERS[userId]);
+      }
+    }
+
+    let lanyardWs = null;
+    let wsHeartbeat = null;
+
+    function connectLanyardWS() {
+      try {
+        if (lanyardWs) {
+          try { lanyardWs.close(); } catch (e) { }
+        }
+        lanyardWs = new WebSocket('wss://api.lanyard.rest/socket');
+        lanyardWs.onmessage = (event) => {
+          try {
+            const msg = JSON.parse(event.data);
+            if (msg.op === 1) {
+              if (wsHeartbeat) clearInterval(wsHeartbeat);
+              wsHeartbeat = setInterval(() => {
+                if (lanyardWs && lanyardWs.readyState === WebSocket.OPEN) {
+                  lanyardWs.send(JSON.stringify({ op: 3 }));
+                }
+              }, msg.d.heartbeat_interval);
+              lanyardWs.send(JSON.stringify({ op: 2, d: { subscribe_to_ids: USER_IDS } }));
+            }
+            if (msg.op === 0) {
+              if (msg.t === 'INIT_STATE') {
+                Object.values(msg.d).forEach(userData => {
+                  if (userData && userData.discord_user) {
+                    applyUserData(userData);
+                  }
+                });
+              } else if (msg.t === 'PRESENCE_UPDATE') {
+                if (msg.d && msg.d.discord_user) {
+                  applyUserData(msg.d);
+                }
+              }
+            }
+          } catch (e) { console.error('WS message error:', e); }
+        };
+        lanyardWs.onclose = () => { if (wsHeartbeat) clearInterval(wsHeartbeat); setTimeout(connectLanyardWS, 5000); };
+        lanyardWs.onerror = () => { lanyardWs.close(); };
+      } catch (err) { console.error('WS connection error:', err); }
+    }
+
+    function initScrollInteractions() {
+      const reveals = document.querySelectorAll('.card-reveal, .archive-reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const card = entry.target;
+              const idx = parseInt(card.dataset.index || '0', 10);
+              const delay = (idx % 2) * 0.08;
+              card.style.transitionDelay = `${delay}s`;
+              card.classList.add('is-visible');
+              observer.unobserve(card);
             }
           });
-          tick = false;
-        });
-        tick = true;
+        }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+
+        reveals.forEach(el => observer.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('is-visible'));
       }
-    }, { passive: true });
-    document.addEventListener('mouseout', e => {
-      const card = e.target.closest('.js-tilt-card');
-      if (card && !card.contains(e.relatedTarget)) card.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg)';
-      if (!e.relatedTarget || e.relatedTarget.nodeName === "HTML") { mouseTracker.x = -1000; mouseTracker.y = -1000; }
-    }, { passive: true });
+    }
 
-    toggleAppView('lobby');
-  };
+    function init() {
+      const cardsContainer = document.getElementById('cardsContainer');
+      const membersContainer = document.getElementById('membersContainer');
 
-  tuswrldbalagbag();
-</script>
+      MAIN_USER_IDS.forEach((id, index) => {
+        cardsContainer.appendChild(createCard(id, index, false));
+      });
+
+      MEMBERS_DATA.forEach((member, index) => {
+        membersContainer.appendChild(createDracCard(member, index));
+      });
+
+      USER_IDS.forEach(id => updateCard(id));
+      connectLanyardWS();
+
+      initScrollInteractions();
+
+      initIntroHolyTyping();
+
+      initArchiveInteractions();
+
+      initTopNav();
+
+      playMainAudio();
+    }
+
+    function initTopNav() {
+      const links = document.querySelectorAll('.top-nav-link');
+      const sections = [
+        { id: 'intro-holy', el: document.getElementById('intro-holy') },
+        { id: 'members-section', el: document.getElementById('members-section') },
+        { id: 'archives-section', el: document.getElementById('archives-section') }
+      ];
+
+      links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            const headerOffset = 40;
+            const elementPosition = targetEl.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      function updateActiveNav() {
+        const scrollPos = window.scrollY + window.innerHeight * 0.35;
+        let currentSectionId = '';
+
+        sections.forEach(({ id, el }) => {
+          if (el) {
+            const top = el.offsetTop;
+            const height = el.offsetHeight;
+            if (scrollPos >= top && scrollPos < top + height) {
+              currentSectionId = id;
+            }
+          }
+        });
+
+        links.forEach(link => {
+          const section = link.dataset.section;
+          if (section === currentSectionId) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveNav, { passive: true });
+      updateActiveNav();
+    }
+
+    function initArchiveInteractions() {
+      const cards = document.querySelectorAll('.archive-card');
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          pauseAllAudio();
+        });
+      });
+    }
+
+    function initIntroHolyTyping() {
+      const introTextEl = document.getElementById('introHolyText');
+      const joinBtn = document.getElementById('introHolyJoinBtn');
+      if (!introTextEl) return;
+
+      const fullText = `𝗵𝗼𝗹𝘆 is a high-energy digital collective founded by 𝘅𝗲𝗻, bringing together individuals driven by curiosity, creativity, and a deep interest in the ever-evolving digital world. Built from a shared passion for learning and exploration, 𝗵𝗼𝗹𝘆 has grown into a community where ideas, skills, and modern internet culture converge.\n\nMore than just a community, 𝗵𝗼𝗹𝘆 represents a mindset \u2014 staying curious, thinking independently, mastering your craft, and knowing how to use what you learn with purpose. We believe that knowledge becomes meaningful through discipline, awareness, and responsible action.`;
+
+      let hasStarted = false;
+      let charIndex = 0;
+
+      function typeIntroText() {
+        if (charIndex <= fullText.length) {
+          let displayText = fullText.substring(0, charIndex);
+          displayText = displayText.replace(/\n\n/g, '<br><br>');
+          introTextEl.innerHTML = displayText + '<span class="intro-typing-cursor"></span>';
+          charIndex++;
+          const delay = (fullText[charIndex - 1] === '.' || fullText[charIndex - 1] === ',') ? 60 : 18;
+          setTimeout(typeIntroText, delay);
+        } else {
+          if (joinBtn) {
+            setTimeout(() => {
+              joinBtn.classList.add('is-visible');
+            }, 400);
+          }
+        }
+      }
+
+      const introSection = document.getElementById('intro-holy');
+      if ('IntersectionObserver' in window && introSection) {
+        const introObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !hasStarted) {
+              hasStarted = true;
+              setTimeout(typeIntroText, 500);
+              introObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.25 });
+        introObserver.observe(introSection);
+      } else {
+        typeIntroText();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
 </body>
+
 </html>
