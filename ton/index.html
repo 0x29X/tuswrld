@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@holy ― ton</title>
+    <link rel="icon" type="image/x-icon" href="https://file.garden/aiHY1T3Ry0Odnk8G/holy.png">
+    <meta name="description" content="boss ko si nae ;p">
+    <meta property="og:title" content="holy ― ton">
+    <meta property="og:description" content="boss ko si nae ;p">
+    <meta property="og:image" content="https://file.garden/aiHY1T3Ry0Odnk8G/holy.png">
+    <meta property="og:url" content="https://tuswrld.xyz/ton">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://file.garden/aiHY1T3Ry0Odnk8G/holy.png">
+    <meta name="theme-color" content="#000000">
+    <meta name="twitter:card" content="summary">
+    <script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik+Glitch&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --online: #3ba55d;
+            --idle: #faa61a;
+            --dnd: #ed4245;
+            --offline: #747f8d;
+            --card: rgba(18, 16, 20, 0.65);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --muted: #b9b6bb;
+            --accent: rgba(255, 255, 255, 0.9);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: url('https://drift.rip/media/users/cursors/cursor_3867_69bb11919e3619.60058093.png'), auto !important;
+            font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
+            background: #000;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle,
+                    rgba(120, 100, 160, 0.08) 0%,
+                    transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        #bg {
+            position: fixed;
+            inset: 0;
+            background-image: url('https://file.garden/aiHY1T3Ry0Odnk8G/sh.gif');
+            background-size: cover;
+            background-position: center;
+            filter: blur(4px) brightness(0.4) saturate(0.8);
+            transform: scale(1.05);
+            z-index: -2;
+        }
+
+        #bg-overlay {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+            z-index: -1;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        #entrance {
+            position: fixed;
+            inset: 0;
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            cursor: pointer;
+            transition: opacity .8s ease;
+        }
+
+        #entrance-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://file.garden/aiHY1T3Ry0Odnk8G/sh.gif');
+            background-size: cover;
+            background-position: center;
+            filter: blur(14px) brightness(0.4);
+            transform: scale(1.1);
+        }
+
+        #entrance-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        #doxx-btn {
+            position: relative;
+            z-index: 1;
+            background: none;
+            border: none;
+            color: #cfcfd4;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: .95rem;
+            letter-spacing: 4px;
+            cursor: pointer;
+            padding: 14px 26px;
+            transition: color .3s ease, transform .3s ease, text-shadow .3s ease;
+            animation: doxxPulse 2.6s ease-in-out infinite;
+        }
+
+        #doxx-btn:hover {
+            color: #ffffff;
+            transform: scale(1.06);
+            text-shadow: 0 0 18px rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes doxxPulse {
+
+            0%,
+            100% {
+                opacity: .65;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        #entrance.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        body:not(.entered) .dashboard {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .dashboard {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1350px;
+            perspective: 1600px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .side-wrap {
+            animation: bob 6s ease-in-out infinite;
+            transform-style: preserve-3d;
+        }
+
+        #servers-wrap {
+            animation-delay: 0s;
+            transform: rotateY(8deg) translateZ(-20px);
+        }
+
+        #music-wrap {
+            animation-delay: .4s;
+            transform: rotateY(-8deg) translateZ(-20px);
+        }
+
+        @keyframes bob {
+
+            0%,
+            100% {
+                transform: translateY(0) rotateY(var(--ry, 0deg)) translateZ(-20px);
+            }
+
+            50% {
+                transform: translateY(-14px) rotateY(var(--ry, 0deg)) translateZ(-20px);
+            }
+        }
+
+        #servers-wrap {
+            --ry: 8deg;
+        }
+
+        #music-wrap {
+            --ry: -8deg;
+        }
+
+        .card {
+            position: relative;
+            background: linear-gradient(180deg,
+                    rgba(24, 20, 26, 0.7) 0%,
+                    rgba(14, 12, 16, 0.75) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 24px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.55),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transform: scale(.85);
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            background: linear-gradient(120deg,
+                    transparent 30%,
+                    rgba(255, 255, 255, 0.03) 50%,
+                    transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        .card:hover::after {
+            opacity: 1;
+        }
+
+        .card:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow:
+                0 30px 75px rgba(0, 0, 0, 0.65),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 0 40px rgba(255, 255, 255, 0.03);
+        }
+
+        body.entered .card {
+            animation: popIn .7s cubic-bezier(.34, 1.56, .64, 1) forwards;
+        }
+
+        body.entered #servers-card {
+            animation-delay: .05s;
+        }
+
+        body.entered #profile-card {
+            animation-delay: .12s;
+        }
+
+        body.entered #music-card {
+            animation-delay: .19s;
+        }
+
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: scale(.85);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #servers-card {
+            width: 340px;
+            min-height: 520px;
+            padding: 30px 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .server-tile {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(30, 20, 35, 0.5);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 28px 18px;
+            text-align: center;
+            overflow: hidden;
+            transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .35s ease;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            aspect-ratio: 4 / 5;
+        }
+
+        .server-tile::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                    rgba(0, 0, 0, 0.15) 0%,
+                    rgba(0, 0, 0, 0.55) 60%,
+                    rgba(0, 0, 0, 0.85) 100%);
+            z-index: 0;
+            transition: background 0.3s ease;
+        }
+
+        .server-tile::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .server-tile>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .server-tile:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+
+        .server-tile:hover::before {
+            background: linear-gradient(180deg,
+                    rgba(0, 0, 0, 0.05) 0%,
+                    rgba(0, 0, 0, 0.4) 60%,
+                    rgba(0, 0, 0, 0.75) 100%);
+        }
+
+        .server-tile img {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 16px;
+            background: #222;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow:
+                0 6px 20px rgba(0, 0, 0, 0.7),
+                0 0 0 4px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease;
+        }
+
+        .server-tile:hover img {
+            transform: scale(1.08);
+        }
+
+        .server-tile .s-name {
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+            letter-spacing: 0.5px;
+            color: #fff;
+        }
+
+        .tag-row {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.65rem;
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+        }
+
+        #profile-card {
+            width: 340px;
+            padding: 0 0 32px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transform: translateZ(40px);
+            box-shadow:
+                0 30px 70px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        .profile-banner {
+            width: 100%;
+            height: 130px;
+            background-image: url('https://file.garden/aiHY1T3Ry0Odnk8G/trev.gif');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .profile-banner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0) 0%,
+                    rgba(18, 16, 20, 0.5) 60%,
+                    rgba(18, 16, 20, 0.95) 100%);
+        }
+
+        .avatar-wrap {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            margin-top: -70px;
+            margin-bottom: 20px;
+            animation: floaty 4.5s ease-in-out infinite;
+            z-index: 2;
+        }
+
+        @keyframes floaty {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .avatar-wrap img.avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow:
+                0 0 0 5px #17161a,
+                0 0 0 6px rgba(255, 255, 255, 0.08),
+                0 15px 40px rgba(0, 0, 0, 0.7);
+            transition: border-color 0.3s ease;
+            background: #17161a;
+        }
+
+        .avatar-wrap:hover img.avatar {
+            border-color: rgba(255, 255, 255, 0.45);
+        }
+
+        .avatar-decoration {
+            position: absolute;
+            top: -8%;
+            left: -8%;
+            width: 116%;
+            height: 116%;
+            pointer-events: none;
+            display: none;
+        }
+
+        .status-dot {
+            position: absolute;
+            bottom: 6px;
+            right: 6px;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            border: 4px solid #17161a;
+            background: var(--offline);
+            transition: background .4s ease;
+            animation: pulseDot 2.4s ease-in-out infinite;
+            z-index: 3;
+        }
+
+        .status-dot.online {
+            background: var(--online);
+        }
+
+        .status-dot.idle {
+            background: var(--idle);
+        }
+
+        .status-dot.dnd {
+            background: var(--dnd);
+        }
+
+        .status-dot.offline {
+            background: var(--offline);
+        }
+
+        @keyframes pulseDot {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.0);
+            }
+
+            50% {
+                box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.06);
+            }
+        }
+
+        .brand-mark {
+            font-family: 'Righteous', cursive;
+            font-size: 2rem;
+            margin-bottom: 6px;
+            opacity: 0.95;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            text-shadow:
+                0 0 20px rgba(255, 255, 255, 1),
+                0 0 40px rgba(255, 255, 255, 0.5),
+                0 2px 10px rgba(0, 0, 0, 1);
+            padding: 0 20px;
+        }
+
+        .username {
+            font-family: 'Righteous', cursive;
+            font-weight: 400;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 22px;
+            color: var(--muted);
+            opacity: 0.75;
+            text-shadow: 0 1px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .social-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .social-btn {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .social-btn img {
+            width: 18px;
+            height: 18px;
+            filter: invert(1);
+            opacity: .8;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background: #fff;
+            transform: translateY(-4px) scale(1.05);
+            box-shadow:
+                0 8px 24px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .social-btn:hover img {
+            filter: invert(0) brightness(0);
+            opacity: 1;
+        }
+
+        .status-box {
+            width: calc(100% - 60px);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 14px 16px;
+            text-align: left;
+            transition: border-color 0.3s ease;
+        }
+
+        .status-box:hover {
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .status-box .discord-ic {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: rgba(88, 101, 242, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a9b1ff;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .status-box .s-label {
+            font-size: .7rem;
+            font-weight: 700;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-box .s-text {
+            font-size: .75rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            font-weight: 500;
+        }
+
+        .type-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 13px;
+            background: var(--muted);
+            margin-left: 2px;
+            animation: cursorBlink .8s steps(1) infinite;
+        }
+
+        @keyframes cursorBlink {
+
+            0%,
+            49% {
+                opacity: 1;
+            }
+
+            50%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        #music-card {
+            width: 340px;
+            background: none;
+            border: none;
+            box-shadow: none;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            padding: 0;
+        }
+
+        #music-card::after {
+            display: none;
+        }
+
+        .flip-scene {
+            perspective: 1600px;
+        }
+
+        .flip-card {
+            position: relative;
+            width: 100%;
+            min-height: 520px;
+            cursor: pointer;
+            transition: transform 1s cubic-bezier(.34, 1.56, .64, 1);
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped {
+            transform: rotate3d(1, -1, 0, 180deg);
+        }
+
+        .flip-face {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                    rgba(24, 20, 26, 0.7) 0%,
+                    rgba(14, 12, 16, 0.75) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 24px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.55),
+                inset 0 1px 0 rgba(255, 255, 255, 0.06),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        .flip-back {
+            transform: rotate3d(1, -1, 0, 180deg);
+        }
+
+        .flip-hint {
+            text-align: center;
+            font-size: .6rem;
+            letter-spacing: 2px;
+            color: var(--muted);
+            opacity: .5;
+            margin-top: 14px;
+            text-transform: uppercase;
+        }
+
+        .back-title {
+            text-align: center;
+            font-size: .72rem;
+            letter-spacing: 2px;
+            color: var(--muted);
+            font-weight: 600;
+            margin-bottom: 28px;
+            text-transform: uppercase;
+        }
+
+        .back-section {
+            text-align: center;
+            margin-bottom: 22px;
+        }
+
+        .back-label {
+            color: var(--online);
+            font-size: .7rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .back-value {
+            font-size: .95rem;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .back-value.muted {
+            color: var(--muted);
+            font-size: .8rem;
+            line-height: 1.6;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        .back-bar {
+            position: relative;
+            width: 100%;
+            height: 3px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.15);
+            margin: 18px 0 26px;
+        }
+
+        .back-bar-fill {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .back-bar-thumb {
+            position: absolute;
+            top: 50%;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #fff;
+            transform: translate(-50%, -50%);
+            left: 0%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: left 0.3s ease;
+        }
+
+        .yt-btn {
+            display: block;
+            text-align: center;
+            background: #e0302d;
+            color: #fff;
+            font-weight: 700;
+            font-size: .85rem;
+            padding: 14px;
+            border-radius: 14px;
+            transition: filter .2s ease, transform .2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(224, 48, 45, 0.3);
+            letter-spacing: 0.5px;
+        }
+
+        .yt-btn:hover {
+            filter: brightness(1.15);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(224, 48, 45, 0.4);
+        }
+
+        .music-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+
+        .music-header .label {
+            font-size: .65rem;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .eq {
+            display: flex;
+            align-items: flex-end;
+            gap: 3px;
+            height: 16px;
+        }
+
+        .eq span {
+            width: 3px;
+            background: var(--online);
+            border-radius: 3px;
+            animation: eq 1s ease-in-out infinite;
+        }
+
+        .eq span:nth-child(1) {
+            height: 7px;
+            animation-delay: 0s;
+        }
+
+        .eq span:nth-child(2) {
+            height: 16px;
+            animation-delay: .2s;
+        }
+
+        .eq span:nth-child(3) {
+            height: 10px;
+            animation-delay: .4s;
+        }
+
+        @keyframes eq {
+
+            0%,
+            100% {
+                transform: scaleY(0.4);
+            }
+
+            50% {
+                transform: scaleY(1);
+            }
+        }
+
+        .art-wrap {
+            width: 100%;
+            aspect-ratio: 1/1;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 18px;
+            background: #111;
+            box-shadow:
+                0 12px 35px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(255, 255, 255, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .flip-front:hover .art-wrap {
+            transform: scale(1.02);
+            box-shadow:
+                0 15px 45px rgba(0, 0, 0, 0.7),
+                0 0 0 1px rgba(255, 255, 255, 0.12);
+        }
+
+        .art-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        #track-title {
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 4px;
+            letter-spacing: -0.3px;
+        }
+
+        #track-artist {
+            color: var(--muted);
+            font-size: .85rem;
+            margin-bottom: 18px;
+            font-weight: 400;
+        }
+
+        .time-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: .65rem;
+            color: var(--muted);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .progress-bar {
+            position: relative;
+            width: 100%;
+            height: 4px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.08);
+            cursor: pointer;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        #progress {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #ffffff, #e8e8e8);
+            width: 0%;
+            pointer-events: none;
+            transition: width 0.1s linear;
+            box-shadow:
+                0 0 12px rgba(255, 255, 255, 0.5),
+                0 0 4px rgba(255, 255, 255, 0.8);
+        }
+
+        .volume-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 2px;
+            margin-top: auto;
+        }
+
+        .volume-row button {
+            background: none;
+            border: none;
+            color: var(--muted);
+            font-size: 1.2rem;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .volume-row button:hover {
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .volume-row input[type="range"] {
+            flex: 1;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 3px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.15);
+            outline: none;
+        }
+
+        .volume-row input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #fff;
+            cursor: pointer;
+            box-shadow:
+                0 0 10px rgba(255, 255, 255, 0.6),
+                0 2px 6px rgba(0, 0, 0, 0.5);
+            transition: transform 0.2s ease;
+        }
+
+        .volume-row input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        .volume-row input[type="range"]::-moz-range-thumb {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .music-player:not(.is-playing) .eq span {
+            animation-play-state: paused;
+            opacity: .3;
+        }
+
+        @media (max-width: 950px) {
+            .dashboard {
+                flex-direction: column;
+                gap: 30px;
+                perspective: none;
+            }
+
+            .side-wrap {
+                transform: none !important;
+                animation: none;
+            }
+
+            #servers-card,
+            #profile-card,
+            #music-card {
+                width: 100%;
+                max-width: 360px;
+                transform: none !important;
+            }
+
+            #profile-card {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body class="entered">
+
+    <div id="entrance" class="hide" style="display: none;">
+        <div id="entrance-bg"></div>
+        <div id="entrance-overlay"></div>
+        <button id="doxx-btn">[ DOXX ME ]</button>
+    </div>
+
+    <div id="bg"></div>
+    <div id="bg-overlay"></div>
+
+    <div class="dashboard">
+
+        <div class="side-wrap" id="servers-wrap">
+            <div class="card tilt" id="servers-card" style="transition: transform 0.5s;">
+                <a class="server-tile" id="server-tile" href="#" target="_blank">
+                    <img id="server1-icon" src="" alt="Server icon">
+                    <div class="s-name" id="server1-name">Loading...</div>
+                    <div class="tag-row" id="server1-tags">
+                        <span class="tag">loading...</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="card" id="profile-card">
+            <div class="profile-banner"></div>
+
+            <div class="avatar-wrap">
+                <img class="avatar" id="user-avatar" src="" alt="avatar">
+                <img class="avatar-decoration" id="avatar-decoration" alt="" src="">
+                <span class="status-dot offline" id="status-dot"></span>
+            </div>
+
+            <div class="brand-mark" id="display-name">Loading...</div>
+            <div class="username" id="discord-username">@loading</div>
+
+            <div class="social-row">
+                <a class="social-btn" href="https://www.roblox.com/users/10836174935/profile" target="_blank"
+                    title="Roblox">
+                    <img src="https://api.iconify.design/simple-icons/roblox.svg?color=%23ffffff" alt="Roblox">
+                </a>
+            </div>
+
+            <div class="status-box" id="status-box" style="display: none;">
+                <div class="discord-ic"><i class="bx bxl-discord-alt"></i></div>
+                <div>
+                    <div class="s-label">Status</div>
+                    <div class="s-text" id="custom-status">
+                        <span id="custom-status-emoji"></span>
+                        <span id="custom-status-text"></span>
+                        <span class="type-cursor"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="side-wrap" id="music-wrap">
+            <div class="card tilt music-player" id="music-card" style="transition: transform 0.5s;">
+                <div class="flip-scene">
+                    <div class="flip-card" id="flip-card">
+                        <div class="flip-face flip-front">
+                            <div class="music-header">
+                                <span class="label" id="music-label">NOW PLAYING</span>
+                                <div class="eq"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="art-wrap">
+                                <img id="track-artwork" src="" alt="Album art">
+                            </div>
+                            <div id="track-title">—</div>
+                            <div id="track-artist">—</div>
+                            <div class="time-row">
+                                <span id="current-time">0:00</span>
+                                <span id="duration">0:00</span>
+                            </div>
+                            <div class="progress-bar" id="progress-bar">
+                                <div id="progress"></div>
+                            </div>
+                            <div class="volume-row" id="volume-row">
+                                <button id="mute-toggle"><i class="bx bx-volume-full"></i></button>
+                                <input type="range" id="volume-slider" min="0" max="100" value="60">
+                            </div>
+                            <div class="flip-hint">CLICK TO VIEW CREDITS</div>
+                        </div>
+                        <div class="flip-face flip-back">
+                            <div class="back-title">TRACK INFO & CREDITS</div>
+                            <div class="back-section">
+                                <div class="back-label">Artist</div>
+                                <div class="back-value" id="back-artist">—</div>
+                            </div>
+                            <div class="back-section">
+                                <div class="back-label">Track</div>
+                                <div class="back-value" id="back-album">—</div>
+                            </div>
+                            <div class="back-section">
+                                <div class="back-label">Credits</div>
+                                <div class="back-value muted" id="back-credits">—</div>
+                            </div>
+                            <div class="back-bar">
+                                <div class="back-bar-fill" id="back-fill"></div>
+                                <div class="back-bar-thumb" id="back-thumb"></div>
+                            </div>
+                            <a class="yt-btn" id="yt-btn" href="#" target="_blank">Open on YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="background-music" preload="auto" src="https://file.garden/aiHY1T3Ry0Odnk8G/trevxx.mp3" loop></audio>
+
+    <script>
+        const holyxtuswrld = 'wRZTDBkmbh';
+        const bannerkungwala = 'https://file.garden/aiHY1T3Ry0Odnk8G/holybanner.png';
+
+        async function holyburat() {
+            const serverTile = document.getElementById('server-tile');
+            const serverIcon = document.getElementById('server1-icon');
+            const serverName = document.getElementById('server1-name');
+            const serverTags = document.getElementById('server1-tags');
+
+            serverTile.style.backgroundImage = `url('${bannerkungwala}')`;
+
+            try {
+                const res = await fetch(
+                    `https://discord.com/api/v9/invites/${holyxtuswrld}?with_counts=true&with_expiration=true`
+                );
+
+                if (!res.ok) throw new Error(`Invite fetch failed: ${res.status}`);
+
+                const data = await res.json();
+                if (!data.guild) throw new Error('Invalid invite');
+
+                const guild = data.guild;
+                const guildId = guild.id;
+                const iconHash = guild.icon;
+
+                let iconUrl = 'https://cdn.discordapp.com/embed/avatars/0.png';
+                if (iconHash) {
+                    const ext = iconHash.startsWith('a_') ? 'gif' : 'png';
+                    iconUrl = `https://cdn.discordapp.com/icons/${guildId}/${iconHash}.${ext}?size=256`;
+                }
+                serverIcon.src = iconUrl;
+                serverIcon.onerror = () => {
+                    serverIcon.src = 'https://cdn.discordapp.com/embed/avatars/0.png';
+                };
+
+                let bgUrl = bannerkungwala;
+                if (guild.banner) {
+                    const ext = guild.banner.startsWith('a_') ? 'gif' : 'png';
+                    bgUrl = `https://cdn.discordapp.com/banners/${guildId}/${guild.banner}.${ext}?size=600`;
+                } else if (guild.splash) {
+                    bgUrl = `https://cdn.discordapp.com/splashes/${guildId}/${guild.splash}.png?size=600`;
+                }
+
+                const imgTest = new Image();
+                imgTest.onload = () => {
+                    serverTile.style.backgroundImage = `url('${bgUrl}')`;
+                };
+                imgTest.onerror = () => {
+                    serverTile.style.backgroundImage = `url('${bannerkungwala}')`;
+                };
+                imgTest.src = bgUrl;
+
+                serverName.textContent = guild.name || 'Unknown Server';
+                serverTile.href = `https://discord.gg/${data.code || holyxtuswrld}`;
+
+                const tags = [];
+                if (guild.vanity_url_code) tags.push(`#${guild.vanity_url_code}`);
+                if (guild.description) {
+                    const desc = guild.description.trim();
+                    tags.push(desc.length > 24 ? desc.slice(0, 24) + '…' : desc);
+                }
+                if (tags.length === 0) tags.push('#discord');
+
+                serverTags.innerHTML = tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+            } catch (err) {
+                console.error('Server invite fetch error:', err);
+                serverName.textContent = 'Invalid invite';
+                serverTags.innerHTML = '<span class="tag">check code</span>';
+                serverIcon.src = 'https://cdn.discordapp.com/embed/avatars/0.png';
+                serverTile.style.backgroundImage = `url('${bannerkungwala}')`;
+            }
+        }
+
+        const holymadafaka = '1055696475914506331';
+
+        const userAvatar = document.getElementById('user-avatar');
+        const avatarDecoration = document.getElementById('avatar-decoration');
+        const statusDot = document.getElementById('status-dot');
+        const displayName = document.getElementById('display-name');
+        const discordUsername = document.getElementById('discord-username');
+        const statusBox = document.getElementById('status-box');
+        const customStatusEmoji = document.getElementById('custom-status-emoji');
+        const customStatusText = document.getElementById('custom-status-text');
+        const musicLabel = document.getElementById('music-label');
+        const trackArtwork = document.getElementById('track-artwork');
+        const trackTitle = document.getElementById('track-title');
+        const trackArtist = document.getElementById('track-artist');
+        const currentTimeEl = document.getElementById('current-time');
+        const durationEl = document.getElementById('duration');
+        const progressEl = document.getElementById('progress');
+        const progressBar = document.getElementById('progress-bar');
+        const backArtist = document.getElementById('back-artist');
+        const backAlbum = document.getElementById('back-album');
+        const backCredits = document.getElementById('back-credits');
+        const backFill = document.getElementById('back-fill');
+        const backThumb = document.getElementById('back-thumb');
+        const ytBtn = document.getElementById('yt-btn');
+        const flipCard = document.getElementById('flip-card');
+        const volumeRow = document.getElementById('volume-row');
+
+        let currentActivity = null;
+        let activityStartTime = null;
+        let progressInterval = null;
+
+        const STATUS_CLASSES = { online: 'online', idle: 'idle', dnd: 'dnd', offline: 'offline' };
+
+        function getAvatarUrl(user) {
+            if (!user) return 'https://cdn.discordapp.com/embed/avatars/0.png';
+            if (user.avatar) {
+                const ext = user.avatar.startsWith('a_') ? 'gif' : 'png';
+                return `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.${ext}?size=256`;
+            }
+            const disc = user.discriminator;
+            if (disc && disc !== '0') return `https://cdn.discordapp.com/embed/avatars/${parseInt(disc) % 5}.png`;
+            try { return `https://cdn.discordapp.com/embed/avatars/${Number((BigInt(user.id) >> 22n) % 6n)}.png`; } catch (e) { return 'https://cdn.discordapp.com/embed/avatars/0.png'; }
+        }
+
+        function getDiscordAssetUrl(applicationId, assetId) {
+            if (!assetId) return '';
+            if (assetId.startsWith('mp:')) return 'https://media.discordapp.net/' + assetId.replace(/^mp:\/?/, '');
+            if (assetId.startsWith('spotify:')) return 'https://i.scdn.co/image/' + assetId.replace('spotify:', '');
+            if (assetId.startsWith('http://') || assetId.startsWith('https://')) return assetId;
+            if (applicationId) return `https://cdn.discordapp.com/app-assets/${applicationId}/${assetId}.png`;
+            return '';
+        }
+
+        function formatTime(seconds) {
+            if (isNaN(seconds) || seconds < 0) return '0:00';
+            const m = Math.floor(seconds / 60);
+            const s = Math.floor(seconds % 60);
+            return `${m}:${String(s).padStart(2, '0')}`;
+        }
+
+        function updateLanyardProgress() {
+            if (!currentActivity || !activityStartTime) return;
+            const now = Date.now();
+            const elapsed = (now - activityStartTime) / 1000;
+
+            if (currentActivity.timestamps && currentActivity.timestamps.end) {
+                const total = (currentActivity.timestamps.end - activityStartTime) / 1000;
+                const percent = Math.min(100, (elapsed / total) * 100);
+                progressEl.style.width = `${percent}%`;
+                backFill.style.width = `${percent}%`;
+                backThumb.style.left = `${percent}%`;
+                currentTimeEl.textContent = formatTime(elapsed);
+                durationEl.textContent = formatTime(total);
+            } else {
+                progressEl.style.width = '100%';
+                backFill.style.width = '100%';
+                backThumb.style.left = '100%';
+                currentTimeEl.textContent = formatTime(elapsed);
+                durationEl.textContent = 'LIVE';
+            }
+        }
+
+        function startLanyardProgressTimer() {
+            if (progressInterval) clearInterval(progressInterval);
+            progressInterval = setInterval(updateLanyardProgress, 1000);
+            updateLanyardProgress();
+        }
+
+        function stopLanyardProgressTimer() {
+            if (progressInterval) { clearInterval(progressInterval); progressInterval = null; }
+        }
+
+        let typingInterval = null;
+
+        function startTypingLoop(fullText) {
+            if (typingInterval) { clearInterval(typingInterval); typingInterval = null; }
+            if (!fullText) { customStatusText.textContent = ''; return; }
+
+            let charIndex = 0;
+            let isDeleting = false;
+            let displayedText = '';
+
+            function typeStep() {
+                if (!isDeleting) {
+                    displayedText = fullText.substring(0, charIndex + 1);
+                    charIndex++;
+                    if (charIndex === fullText.length) {
+                        isDeleting = true;
+                        clearInterval(typingInterval);
+                        typingInterval = setTimeout(() => { typingInterval = setInterval(typeStep, 50); }, 3000);
+                        customStatusText.textContent = displayedText;
+                        return;
+                    }
+                } else {
+                    displayedText = fullText.substring(0, charIndex - 1);
+                    charIndex--;
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        clearInterval(typingInterval);
+                        typingInterval = setInterval(typeStep, 80);
+                        customStatusText.textContent = '';
+                        return;
+                    }
+                }
+                customStatusText.textContent = displayedText;
+            }
+            typingInterval = setInterval(typeStep, 80);
+        }
+
+        function applyLanyardData(data) {
+            if (!data || !data.discord_user) return;
+            const user = data.discord_user;
+            const status = data.discord_status || 'offline';
+
+            userAvatar.src = getAvatarUrl(user);
+            userAvatar.onerror = () => { userAvatar.src = 'https://cdn.discordapp.com/embed/avatars/0.png'; };
+
+            const decoAsset = user.avatar_decoration_data?.asset;
+            if (decoAsset) {
+                avatarDecoration.src = `https://cdn.discordapp.com/avatar-decoration-presets/${decoAsset}.png?size=160&passthrough=true`;
+                avatarDecoration.style.display = 'block';
+            } else {
+                avatarDecoration.style.display = 'none';
+            }
+
+            statusDot.className = `status-dot ${STATUS_CLASSES[status] || 'offline'}`;
+            displayName.textContent = user.global_name || user.username;
+            discordUsername.textContent = `@${user.username}`;
+
+            const customAct = (data.activities || []).find(act => act.type === 4);
+            let statusText = '';
+            let statusEmoji = '';
+
+            if (customAct) {
+                if (customAct.state) statusText = customAct.state;
+                if (customAct.emoji) {
+                    if (customAct.emoji.id) {
+                        const ext = customAct.emoji.animated ? 'gif' : 'png';
+                        statusEmoji = `<img src="https://cdn.discordapp.com/emojis/${customAct.emoji.id}.${ext}?size=32" style="width:16px;height:16px;vertical-align:middle;margin-right:4px;">`;
+                    } else if (customAct.emoji.name) {
+                        statusEmoji = customAct.emoji.name + ' ';
+                    }
+                }
+            }
+
+            if (statusText || statusEmoji) {
+                statusBox.style.display = 'flex';
+                customStatusEmoji.innerHTML = statusEmoji;
+                startTypingLoop(statusText);
+            } else {
+                statusBox.style.display = 'none';
+                customStatusEmoji.innerHTML = '';
+                customStatusText.textContent = '';
+                if (typingInterval) { clearInterval(typingInterval); typingInterval = null; }
+            }
+
+            let rpcAct = null;
+
+            (data.activities || []).forEach(act => {
+                if (act.type !== 4 && !rpcAct) rpcAct = act;
+            });
+
+            if (data.listening_to_spotify && data.spotify) {
+                const sp = data.spotify;
+                currentActivity = { type: 'spotify', name: sp.song, details: sp.artist, album: sp.album, artwork: sp.album_art_url, timestamps: sp.timestamps };
+                activityStartTime = sp.timestamps?.start || Date.now();
+
+                musicLabel.textContent = 'LISTENING TO SPOTIFY';
+                trackArtwork.src = sp.album_art_url || '';
+                trackTitle.textContent = sp.song || '—';
+                trackArtist.textContent = sp.artist || '—';
+
+                backArtist.textContent = sp.artist || '—';
+                backAlbum.textContent = sp.album || '—';
+                backCredits.textContent = `Playing on Spotify • ${sp.song || '—'}`;
+                ytBtn.href = `https://www.youtube.com/results?search_query=${encodeURIComponent(sp.artist + ' ' + sp.song)}`;
+
+                startLanyardProgressTimer();
+                flipCard.classList.remove('flipped');
+            } else if (rpcAct) {
+                const largeImg = getDiscordAssetUrl(rpcAct.application_id, rpcAct.assets?.large_image);
+                currentActivity = { type: 'rpc', name: rpcAct.name, details: rpcAct.details, state: rpcAct.state, artwork: largeImg, timestamps: rpcAct.timestamps };
+                activityStartTime = rpcAct.timestamps?.start || Date.now();
+
+                musicLabel.textContent = 'PLAYING';
+                trackArtwork.src = largeImg || 'https://i.pinimg.com/736x/07/49/4e/07494e70711fd7a30b5ee1ffe24b7499.jpg';
+                trackTitle.textContent = rpcAct.name || 'Ang Balikat At Baywang';
+                trackArtist.textContent = rpcAct.details || rpcAct.state || 'Ian Quiruz';
+
+                backArtist.textContent = rpcAct.name || 'Ian Quiruz';
+                backAlbum.textContent = rpcAct.details || 'Ang Balikat At Baywang';
+                backCredits.textContent = rpcAct.state || 'This track is currently playing as the background music.';
+                ytBtn.href = `https://www.youtube.com/results?search_query=${encodeURIComponent(rpcAct.name || '')}`;
+
+                startLanyardProgressTimer();
+                flipCard.classList.remove('flipped');
+            } else {
+                currentActivity = null;
+                activityStartTime = null;
+                stopLanyardProgressTimer();
+
+                musicLabel.textContent = 'NOW PLAYING';
+                trackArtwork.src = 'https://i.pinimg.com/736x/07/49/4e/07494e70711fd7a30b5ee1ffe24b7499.jpg';
+                trackTitle.textContent = 'Ang Balikat At Baywang';
+                trackArtist.textContent = 'Ian Quiruz';
+
+                backArtist.textContent = 'Ian Quiruz';
+                backAlbum.textContent = 'Ang Balikat At Baywang';
+                backCredits.textContent = 'This track is currently playing as the background music.';
+
+                ytBtn.href = 'https://www.youtube.com/watch?v=KAk474gCWn8&list=RDKAk474gCWn8&start_radio=1';
+                flipCard.classList.remove('flipped');
+
+                updateLocalProgress();
+            }
+        }
+
+        async function profilenisex() {
+            try {
+                const res = await fetch(`https://api.lanyard.rest/v1/users/${holymadafaka}`);
+                const json = await res.json();
+                if (json.success) applyLanyardData(json.data);
+            } catch (err) { console.error('Lanyard fetch error:', err); }
+        }
+
+        let ws = null;
+        let heartbeatInterval = null;
+
+        function magiclanyard() {
+            try {
+                if (ws) { try { ws.close(); } catch (e) { } }
+                ws = new WebSocket('wss://api.lanyard.rest/socket');
+
+                ws.onmessage = (event) => {
+                    try {
+                        const msg = JSON.parse(event.data);
+                        if (msg.op === 1) {
+                            if (heartbeatInterval) clearInterval(heartbeatInterval);
+                            heartbeatInterval = setInterval(() => {
+                                if (ws && ws.readyState === WebSocket.OPEN) ws.send(JSON.stringify({ op: 3 }));
+                            }, msg.d.heartbeat_interval);
+                            ws.send(JSON.stringify({ op: 2, d: { subscribe_to_ids: [holymadafaka] } }));
+                        }
+                        if (msg.op === 0) {
+                            if (msg.t === 'INIT_STATE') {
+                                const userData = msg.d[holymadafaka];
+                                if (userData) applyLanyardData(userData);
+                            } else if (msg.t === 'PRESENCE_UPDATE') {
+                                if (msg.d && msg.d.discord_user) applyLanyardData(msg.d);
+                            }
+                        }
+                    } catch (e) { console.error('WS message error:', e); }
+                };
+
+                ws.onclose = () => { if (heartbeatInterval) clearInterval(heartbeatInterval); setTimeout(magiclanyard, 5000); };
+                ws.onerror = () => { ws.close(); };
+            } catch (err) { console.error('WS connection error:', err); }
+        }
+
+        flipCard.addEventListener('click', (e) => {
+            if (e.target.closest('.progress-bar') ||
+                e.target.closest('.volume-row') ||
+                e.target.closest('.yt-btn')) {
+                return;
+            }
+            flipCard.classList.toggle('flipped');
+        });
+
+        const volumeSlider = document.getElementById('volume-slider');
+        const muteToggle = document.getElementById('mute-toggle');
+        const bgMusic = document.getElementById('background-music');
+
+        let musicStarted = false;
+        let isMuted = false;
+
+        function startBackgroundMusic() {
+            if (musicStarted) return;
+            if (bgMusic && bgMusic.paused) {
+                bgMusic.volume = volumeSlider.value / 100;
+                const playPromise = bgMusic.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        musicStarted = true;
+                        document.getElementById('music-card').classList.add('is-playing');
+                    }).catch((err) => {
+                        console.log('Autoplay blocked:', err);
+                    });
+                }
+            }
+        }
+
+        startBackgroundMusic();
+
+        function handleFirstInteraction() {
+            startBackgroundMusic();
+            document.removeEventListener('click', handleFirstInteraction);
+            document.removeEventListener('touchstart', handleFirstInteraction);
+            document.removeEventListener('keydown', handleFirstInteraction);
+            document.removeEventListener('scroll', handleFirstInteraction);
+        }
+        document.addEventListener('click', handleFirstInteraction);
+        document.addEventListener('touchstart', handleFirstInteraction);
+        document.addEventListener('keydown', handleFirstInteraction);
+        document.addEventListener('scroll', handleFirstInteraction);
+
+        window.addEventListener('scroll', function onScroll() {
+            startBackgroundMusic();
+            if (musicStarted) {
+                window.removeEventListener('scroll', onScroll);
+            }
+        }, { passive: true });
+
+        function updateLocalProgress() {
+            if (currentActivity) return;
+
+            if (!bgMusic.duration || isNaN(bgMusic.duration)) {
+                currentTimeEl.textContent = formatTime(bgMusic.currentTime || 0);
+                durationEl.textContent = '0:00';
+                return;
+            }
+
+            const percent = (bgMusic.currentTime / bgMusic.duration) * 100;
+            progressEl.style.width = `${percent}%`;
+            backFill.style.width = `${percent}%`;
+            backThumb.style.left = `${percent}%`;
+            currentTimeEl.textContent = formatTime(bgMusic.currentTime);
+            durationEl.textContent = formatTime(bgMusic.duration);
+        }
+
+        bgMusic.addEventListener('timeupdate', updateLocalProgress);
+        bgMusic.addEventListener('loadedmetadata', updateLocalProgress);
+        bgMusic.addEventListener('play', () => {
+            document.getElementById('music-card').classList.add('is-playing');
+            updateLocalProgress();
+        });
+        bgMusic.addEventListener('pause', () => {
+            document.getElementById('music-card').classList.remove('is-playing');
+        });
+        bgMusic.addEventListener('ended', () => {
+            progressEl.style.width = '0%';
+            backFill.style.width = '0%';
+            backThumb.style.left = '0%';
+            currentTimeEl.textContent = '0:00';
+        });
+
+        progressBar.addEventListener('click', (e) => {
+            e.stopPropagation();
+
+            if (currentActivity) return;
+
+            if (!bgMusic.duration || isNaN(bgMusic.duration)) return;
+            const rect = progressBar.getBoundingClientRect();
+            const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+            bgMusic.currentTime = percent * bgMusic.duration;
+            updateLocalProgress();
+        });
+
+        volumeRow.addEventListener('click', (e) => e.stopPropagation());
+
+        volumeSlider.addEventListener('input', (e) => {
+            if (bgMusic) {
+                bgMusic.volume = e.target.value / 100;
+                if (isMuted && e.target.value > 0) {
+                    isMuted = false;
+                    bgMusic.muted = false;
+                    muteToggle.innerHTML = '<i class="bx bx-volume-full"></i>';
+                }
+            }
+        });
+
+        muteToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (bgMusic) {
+                isMuted = !isMuted;
+                bgMusic.muted = isMuted;
+                muteToggle.innerHTML = isMuted
+                    ? '<i class="bx bx-volume-mute"></i>'
+                    : '<i class="bx bx-volume-full"></i>';
+            }
+        });
+
+        document.querySelectorAll('.tilt').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -4;
+                const rotateY = ((x - centerX) / centerX) * 4;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            });
+        });
+
+        holyburat();
+        profilenisex();
+        magiclanyard();
+    </script>
+
+</body>
+
+</html>
