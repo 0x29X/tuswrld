@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>tuswrld</title>
+
+    <meta name="description" content="poide patingen pepe?">
+    <meta property="og:title" content="holy">
+    <meta property="og:description" content="poide patingen pepe?">
+    <meta property="og:image" content="https://file.garden/au7G4rXqsE0SOH3M/tu%24.png">
+    <meta property="og:url" content="https://tuswrld.xyz">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://file.garden/au7G4rXqsE0SOH3M/tu%24.png">
+    <meta name="theme-color" content="#000000">
+    <script disable-devtool-auto src="https://cdn.jsdelivr.net/npm/disable-devtool"></script>
+
+    <link rel="icon" href="https://file.garden/au7G4rXqsE0SOH3M/tuswrld.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="intro" class="nomxrcy-intro">
+        <div class="nomxrcy-intro-wrap">
+            <svg id="nomxrcySvg" class="nomxrcy-svg" viewBox="0 0 725 344" aria-hidden="true"></svg>
+            <div id="nomxrcyRealLogo" class="nomxrcy-real-logo">
+                <img src="https://file.garden/au7G4rXqsE0SOH3M/tuswrld.png" alt="tuswrld">
+            </div>
+        </div>
+    </div>
+
+
+    <header class="header">
+
+        <a href="#home" class="logo" data-page="home">
+            <img src="https://file.garden/au7G4rXqsE0SOH3M/tuswrld.png" alt="Logo">
+        </a>
+
+        <nav class="navbar">
+
+            <a href="#home" data-page="home">
+                HOME
+            </a>
+
+            <a href="#member" data-page="member">
+                MEMBERS
+            </a>
+
+            <a href="#archive" data-page="archive">
+                ARCHIVE
+            </a>
+
+        </nav>
+
+    </header>
+
+    <div class="volume-corner" id="musicToggle">
+
+        <div class="volume-panel">
+            <input id="volumeSlider" class="volume-slider" type="range" min="0" max="100" value="100"
+                aria-label="Volume">
+        </div>
+
+        <button id="volumeBtn" class="volume-btn" type="button" aria-label="Toggle sound">
+            <span class="music-bars">
+                <span class="music-bar"></span>
+                <span class="music-bar"></span>
+                <span class="music-bar"></span>
+                <span class="music-bar"></span>
+            </span>
+        </button>
+    </div>
+
+    <div id="siteBg" class="site-bg" aria-hidden="true">
+        <div class="site-bg-layer site-bg-default active" id="siteBgDefault">
+            <canvas id="codeBgCanvas"></canvas>
+        </div>
+        <div class="site-bg-layer site-bg-hover" id="siteBgHover"></div>
+        <div class="site-bg-overlay"></div>
+    </div>
+
+    <main>
+
+        <section id="home" class="page active">
+
+            <div class="about-section">
+
+                <div class="about-image">
+                    <img src="https://file.garden/au7G4rXqsE0SOH3M/tu%24.png" alt="About">
+                </div>
+
+                <div class="about-content">
+
+                    <div class="about-text">
+
+                        <div class="about-typing-wrap">
+                            <span class="about-typing-text" id="aboutTypingText"></span><span
+                                class="about-typing-cursor" id="aboutTypingCursor"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="about-divider"></div>
+
+                </div>
+
+            </div>
+
+            <div class="affil-section" id="affilSection">
+
+                <div class="affil-header">
+                    <div class="affil-title-wrap">
+                        <span class="affil-bracket left" aria-hidden="true">
+                            <span class="grid-cell c-tl"></span>
+                            <span class="grid-cell c-l"></span>
+                            <span class="grid-cell c-bl"></span>
+                        </span>
+                        <h2 class="affil-title-text">affiliations</h2>
+                        <span class="affil-bracket right" aria-hidden="true">
+                            <span class="grid-cell c-tr"></span>
+                            <span class="grid-cell c-r"></span>
+                            <span class="grid-cell c-br"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="affil-cards" id="affilContainer"></div>
+
+            </div>
+
+        </section>
+
+
+        <section id="member" class="page">
+
+            <div class="page-content member-content">
+
+                <div class="member-section">
+
+                    <div class="member-carousel" data-group="above">
+
+                        <div class="member-cards"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="archive" class="page">
+
+            <div class="page-content archive-content">
+
+                <div class="archive-header">
+                    <div class="affil-title-wrap">
+                        <span class="affil-bracket left" aria-hidden="true">
+                            <span class="grid-cell c-tl"></span>
+                            <span class="grid-cell c-l"></span>
+                            <span class="grid-cell c-bl"></span>
+                        </span>
+                        <h2 class="affil-title-text">archives</h2>
+                        <span class="affil-bracket right" aria-hidden="true">
+                            <span class="grid-cell c-tr"></span>
+                            <span class="grid-cell c-r"></span>
+                            <span class="grid-cell c-br"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="archives-grid" id="archivesGrid">
+
+                    <a href="https://www.youtube.com/watch?v=uspKnn--C2c" target="_blank" rel="noopener noreferrer"
+                        class="archive-card">
+                        <div class="archive-thumb-box">
+                            <img class="archive-thumb-img"
+                                src="https://img.youtube.com/vi/uspKnn--C2c/maxresdefault.jpg" alt="Demonyong hinudas"
+                                loading="lazy" />
+                            <div class="archive-thumb-overlay"></div>
+                            <div class="archive-play-btn">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="archive-meta">
+                            <div class="archive-author-avatar">
+                                <img src="https://i.pinimg.com/736x/98/0b/3f/980b3feb6eb5d22fd47dcca48b747cab.jpg"
+                                    alt="xen" />
+                            </div>
+                            <span class="archive-author-name">xen</span>
+                            <span class="archive-video-title">Demonyong hinudas</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.youtube.com/watch?v=SykDX7Lx7bU" target="_blank" rel="noopener noreferrer"
+                        class="archive-card">
+                        <div class="archive-thumb-box">
+                            <img class="archive-thumb-img"
+                                src="https://img.youtube.com/vi/SykDX7Lx7bU/maxresdefault.jpg" alt="simpleng tao lang"
+                                loading="lazy" />
+                            <div class="archive-thumb-overlay"></div>
+                            <div class="archive-play-btn">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="archive-meta">
+                            <div class="archive-author-avatar">
+                                <img src="https://i.pinimg.com/736x/98/0b/3f/980b3feb6eb5d22fd47dcca48b747cab.jpg"
+                                    alt="xen" />
+                            </div>
+                            <span class="archive-author-name">xen</span>
+                            <span class="archive-video-title">simpleng tao lang</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.youtube.com/watch?v=UUor4lxMu8s" target="_blank" rel="noopener noreferrer"
+                        class="archive-card">
+                        <div class="archive-thumb-box">
+                            <img class="archive-thumb-img"
+                                src="https://img.youtube.com/vi/UUor4lxMu8s/maxresdefault.jpg" alt="Iba talaga pag 4luv"
+                                loading="lazy" />
+                            <div class="archive-thumb-overlay"></div>
+                            <div class="archive-play-btn">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="archive-meta">
+                            <div class="archive-author-avatar">
+                                <img src="https://i.pinimg.com/736x/98/0b/3f/980b3feb6eb5d22fd47dcca48b747cab.jpg"
+                                    alt="xen" />
+                            </div>
+                            <span class="archive-author-name">xen</span>
+                            <span class="archive-video-title">Iba talaga pag 4luv</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.youtube.com/watch?v=_7d6P4POdU4" target="_blank" rel="noopener noreferrer"
+                        class="archive-card">
+                        <div class="archive-thumb-box">
+                            <img class="archive-thumb-img"
+                                src="https://img.youtube.com/vi/_7d6P4POdU4/maxresdefault.jpg" alt="wala lang"
+                                loading="lazy" />
+                            <div class="archive-thumb-overlay"></div>
+                            <div class="archive-play-btn">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="archive-meta">
+                            <div class="archive-author-avatar">
+                                <img src="https://i.pinimg.com/736x/98/0b/3f/980b3feb6eb5d22fd47dcca48b747cab.jpg"
+                                    alt="xen" />
+                            </div>
+                            <span class="archive-author-name">xen</span>
+                            <span class="archive-video-title">wala lang</span>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <div id="archiveVideoModal" class="archive-video-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="archive-video-modal-bg" id="archiveVideoModalBg"></div>
+        <div class="archive-video-modal-inner">
+            <button class="archive-video-modal-back" id="archiveVideoModalBack">← BACK</button>
+            <button class="archive-video-modal-pause" id="archiveVideoModalPause">⏸ PAUSE</button>
+            <div class="archive-video-modal-player" id="archiveVideoModalPlayer">
+            </div>
+            <div class="archive-video-modal-meta" id="archiveVideoModalMeta">
+                <div class="archive-video-modal-avatar" id="archiveVideoModalAvatar"></div>
+                <div class="archive-video-modal-info">
+                    <span class="archive-video-modal-author" id="archiveVideoModalAuthor"></span>
+                    <span class="archive-video-modal-title" id="archiveVideoModalTitle"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="memberModal" class="member-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="member-modal-bg" id="memberModalBg"></div>
+        <div class="member-modal-overlay"></div>
+        <button class="member-modal-back" id="memberModalBack">← BACK</button>
+        <div class="member-modal-card" id="memberModalCard">
+            <div class="member-modal-banner" id="memberModalBanner"></div>
+            <div class="member-modal-avatar-wrap">
+                <img class="member-modal-avatar" id="memberModalAvatar"
+                    src="https://cdn.discordapp.com/embed/avatars/0.png" alt="">
+                <img class="member-modal-deco" id="memberModalDeco" src="" alt="" style="display:none">
+                <span class="member-modal-status-dot offline" id="memberModalStatusDot"></span>
+            </div>
+            <div class="member-modal-info">
+                <div class="member-modal-name" id="memberModalName">—</div>
+                <div class="member-modal-handle" id="memberModalHandle">@...</div>
+                <div class="member-modal-status-text" id="memberModalStatusText"></div>
+                <div class="member-modal-divider"></div>
+                <div class="member-modal-socials" id="memberModalSocials"></div>
+                <div class="member-modal-activity" id="memberModalActivity">
+                    <div class="act-label">Activity</div>
+                    <div class="act-row" id="memberModalActRow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="intro.js"></script>
+
+    <script>
+        (function () {
+            const text = "tuswrld is a high-energy digital collective, bringing together individuals driven by curiosity, creativity, and a deep interest in the ever-evolving digital world. Built from a shared passion for learning and exploration, tuswrld has grown into a community where ideas, skills, and modern internet culture converge.\n\nMore than just a community, tuswrld represents a mindset \u2014 staying curious, thinking independently, mastering your craft, and knowing how to use what you learn with purpose. We believe that knowledge becomes meaningful through discipline, awareness, and responsible action.";
+
+            function stylize(t) {
+                return t
+                    .replace(/tuswrld/g, '<strong class="about-highlight">tuswrld</strong>')
+                    .replace(/\n/g, '<br>');
+            }
+
+            const el = document.getElementById("aboutTypingText");
+            const cursor = document.getElementById("aboutTypingCursor");
+            if (!el) return;
+
+            const TYPE_SPEED = 24;
+            let i = 0;
+
+            function step() {
+                i++;
+                el.innerHTML = stylize(text.slice(0, i));
+
+                if (i >= text.length) {
+                    setTimeout(function () {
+                        if (cursor) cursor.classList.add("done");
+                    }, 1200);
+                    return;
+                }
+                setTimeout(step, TYPE_SPEED);
+            }
+
+            const section = document.querySelector(".about-section");
+            let started = false;
+
+            if (section && "IntersectionObserver" in window) {
+                const obs = new IntersectionObserver(function (entries) {
+                    if (entries[0].isIntersecting && !started) {
+                        started = true;
+                        step();
+                        obs.disconnect();
+                    }
+                }, { threshold: 0.15 });
+                obs.observe(section);
+            } else {
+                step();
+            }
+
+            var reveals = document.querySelectorAll(
+                ".about-section, .about-image, .about-content, " +
+                ".member-section, .affil-card, .footer"
+            );
+
+            if ("IntersectionObserver" in window) {
+                var revealObs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("is-visible");
+                            revealObs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+
+                reveals.forEach(function (el) {
+                    el.classList.add("scroll-reveal");
+                    revealObs.observe(el);
+                });
+            }
+        })();
+    </script>
+
+</body>
+
+</html>
