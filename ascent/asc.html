@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascent</title>
+
+    <meta name="description" content="Ascent">
+    <meta property="og:title" content="Ascent">
+    <meta property="og:description" content="Ascent">
+    <meta property="og:image" content="https://file.garden/atTpdg76zTCB65gN/ascentxxx.png">
+    <meta property="og:url" content="https://tuswrld.xyz/ascent.html">
+    <meta name="theme-color" content="#ef4444">
+
+    <link rel="icon" href="https://file.garden/atTpdg76zTCB65gN/ascent.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000000;
+            color: #ffffff;
+            font-family: 'JetBrains Mono', monospace;
+            user-select: none;
+        }
+
+        .ascent-intro-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            background: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            cursor: default;
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .ascent-intro-overlay.hide {
+            opacity: 0;
+            transform: scale(1.04);
+            pointer-events: none;
+        }
+
+        .ascent-intro-wrap {
+            position: relative;
+            width: clamp(260px, 42vw, 400px);
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.85s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.65s ease;
+        }
+
+        .ascent-intro-wrap.fly {
+            transform: scale(0.92);
+            opacity: 0;
+        }
+
+        .ascent-intro-svg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: visible;
+        }
+
+        .trace-cut {
+            transition: opacity 0.4s ease;
+        }
+
+        .trace-cut path {
+            fill: none;
+            stroke: #ef4444;
+            stroke-width: 2.2px;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .trace-blade {
+            transition: opacity 0.35s ease;
+        }
+
+        .trace-blade path {
+            fill: none;
+            stroke: #ffffff;
+            stroke-width: 3.2px;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .ascent-real-logo {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.96);
+            transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+            pointer-events: none;
+        }
+
+        .ascent-real-logo.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .ascent-real-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .main-page {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.96);
+            transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 10;
+        }
+
+        .main-page.loaded {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .showcase-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 90vw;
+            max-height: 90vh;
+        }
+
+        .showcase-image {
+            max-width: min(850px, 92vw);
+            max-height: 88vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="ascentIntro" class="ascent-intro-overlay">
+        <div id="introWrap" class="ascent-intro-wrap">
+
+            <svg id="introSvg" class="ascent-intro-svg" viewBox="0 0 500 500" aria-hidden="true">
+                <g class="trace-cut">
+                    <path id="pathCut"
+                        d="M 251 112 L 249 116 L 247 120 L 245 124 L 243 128 L 242 132 L 240 136 L 238 140 L 236 144 L 234 148 L 232 152 L 230 156 L 228 160 L 226 164 L 224 168 L 222 172 L 220 176 L 218 180 L 216 184 L 215 188 L 213 192 L 211 196 L 209 200 L 207 204 L 205 208 L 203 212 L 201 216 L 199 220 L 197 224 L 195 228 L 193 232 L 191 236 L 190 240 L 188 244 L 186 248 L 184 252 L 182 256 L 180 260 L 178 264 L 176 268 L 174 272 L 172 276 L 170 280 L 168 284 L 166 288 L 165 292 L 163 296 L 161 300 L 159 304 L 157 308 L 155 312 L 153 316 L 151 320 L 149 324 L 147 328 L 145 332 L 144 336 L 142 340 L 140 344 L 138 348 L 136 352 L 134 356 L 132 360 L 130 364 L 128 368 L 126 372 L 124 376 L 122 380 L 121 384 L 125 383 L 129 381 L 133 379 L 137 376 L 141 374 L 145 372 L 149 369 L 153 367 L 157 365 L 161 363 L 165 360 L 169 358 L 173 356 L 177 354 L 181 352 L 184 349 L 186 345 L 188 341 L 190 337 L 192 333 L 194 329 L 196 325 L 198 321 L 200 317 L 202 313 L 204 309 L 206 305 L 208 301 L 210 297 L 212 293 L 214 289 L 216 285 L 219 281 L 221 277 L 223 273 L 224 269 L 227 265 L 229 261 L 231 257 L 233 253 L 235 249 L 237 245 L 239 241 L 241 237 L 243 233 L 245 229 L 247 225 L 249 221 L 252 217 L 254 221 L 256 225 L 258 229 L 260 233 L 262 237 L 265 241 L 267 245 L 269 249 L 271 253 L 273 257 L 270 260 L 266 262 L 262 264 L 258 266 L 254 268 L 250 270 L 246 271 L 242 273 L 238 275 L 236 278 L 240 280 L 244 281 L 248 283 L 252 285 L 256 287 L 260 289 L 264 291 L 268 293 L 272 295 L 276 297 L 280 299 L 284 300 L 288 302 L 292 304 L 296 307 L 300 310 L 302 314 L 305 318 L 307 322 L 308 326 L 310 330 L 312 334 L 314 338 L 316 342 L 318 346 L 321 350 L 325 353 L 329 355 L 333 358 L 337 360 L 341 362 L 345 365 L 349 367 L 353 369 L 357 371 L 361 374 L 365 376 L 369 379 L 373 381 L 377 383 L 381 385 L 384 385 L 382 381 L 380 377 L 378 373 L 376 369 L 374 365 L 372 361 L 370 357 L 368 353 L 366 349 L 365 345 L 363 341 L 361 337 L 359 333 L 357 329 L 355 325 L 353 321 L 351 317 L 349 313 L 347 309 L 345 305 L 342 302 L 338 300 L 334 298 L 330 297 L 326 295 L 322 294 L 318 292 L 314 290 L 310 289 L 306 287 L 302 286 L 298 284 L 294 282 L 290 281 L 286 279 L 288 277 L 292 275 L 296 273 L 300 272 L 304 270 L 308 268 L 312 267 L 316 265 L 320 264 L 324 262 L 323 258 L 321 254 L 319 250 L 317 246 L 315 242 L 313 238 L 311 234 L 309 230 L 307 226 L 306 222 L 304 218 L 302 214 L 300 210 L 298 206 L 296 202 L 294 198 L 292 194 L 290 190 L 288 186 L 286 182 L 284 178 L 283 174 L 281 170 L 279 166 L 277 162 L 275 158 L 273 154 L 271 150 L 269 146 L 267 142 L 265 138 L 263 134 L 261 130 L 259 126 L 258 122 L 256 118 L 254 114 Z">
+                    </path>
+                </g>
+                <g class="trace-blade">
+                    <path id="pathBlade"
+                        d="M 251 112 L 249 116 L 247 120 L 245 124 L 243 128 L 242 132 L 240 136 L 238 140 L 236 144 L 234 148 L 232 152 L 230 156 L 228 160 L 226 164 L 224 168 L 222 172 L 220 176 L 218 180 L 216 184 L 215 188 L 213 192 L 211 196 L 209 200 L 207 204 L 205 208 L 203 212 L 201 216 L 199 220 L 197 224 L 195 228 L 193 232 L 191 236 L 190 240 L 188 244 L 186 248 L 184 252 L 182 256 L 180 260 L 178 264 L 176 268 L 174 272 L 172 276 L 170 280 L 168 284 L 166 288 L 165 292 L 163 296 L 161 300 L 159 304 L 157 308 L 155 312 L 153 316 L 151 320 L 149 324 L 147 328 L 145 332 L 144 336 L 142 340 L 140 344 L 138 348 L 136 352 L 134 356 L 132 360 L 130 364 L 128 368 L 126 372 L 124 376 L 122 380 L 121 384 L 125 383 L 129 381 L 133 379 L 137 376 L 141 374 L 145 372 L 149 369 L 153 367 L 157 365 L 161 363 L 165 360 L 169 358 L 173 356 L 177 354 L 181 352 L 184 349 L 186 345 L 188 341 L 190 337 L 192 333 L 194 329 L 196 325 L 198 321 L 200 317 L 202 313 L 204 309 L 206 305 L 208 301 L 210 297 L 212 293 L 214 289 L 216 285 L 219 281 L 221 277 L 223 273 L 224 269 L 227 265 L 229 261 L 231 257 L 233 253 L 235 249 L 237 245 L 239 241 L 241 237 L 243 233 L 245 229 L 247 225 L 249 221 L 252 217 L 254 221 L 256 225 L 258 229 L 260 233 L 262 237 L 265 241 L 267 245 L 269 249 L 271 253 L 273 257 L 270 260 L 266 262 L 262 264 L 258 266 L 254 268 L 250 270 L 246 271 L 242 273 L 238 275 L 236 278 L 240 280 L 244 281 L 248 283 L 252 285 L 256 287 L 260 289 L 264 291 L 268 293 L 272 295 L 276 297 L 280 299 L 284 300 L 288 302 L 292 304 L 296 307 L 300 310 L 302 314 L 305 318 L 307 322 L 308 326 L 310 330 L 312 334 L 314 338 L 316 342 L 318 346 L 321 350 L 325 353 L 329 355 L 333 358 L 337 360 L 341 362 L 345 365 L 349 367 L 353 369 L 357 371 L 361 374 L 365 376 L 369 379 L 373 381 L 377 383 L 381 385 L 384 385 L 382 381 L 380 377 L 378 373 L 376 369 L 374 365 L 372 361 L 370 357 L 368 353 L 366 349 L 365 345 L 363 341 L 361 337 L 359 333 L 357 329 L 355 325 L 353 321 L 351 317 L 349 313 L 347 309 L 345 305 L 342 302 L 338 300 L 334 298 L 330 297 L 326 295 L 322 294 L 318 292 L 314 290 L 310 289 L 306 287 L 302 286 L 298 284 L 294 282 L 290 281 L 286 279 L 288 277 L 292 275 L 296 273 L 300 272 L 304 270 L 308 268 L 312 267 L 316 265 L 320 264 L 324 262 L 323 258 L 321 254 L 319 250 L 317 246 L 315 242 L 313 238 L 311 234 L 309 230 L 307 226 L 306 222 L 304 218 L 302 214 L 300 210 L 298 206 L 296 202 L 294 198 L 292 194 L 290 190 L 288 186 L 286 182 L 284 178 L 283 174 L 281 170 L 279 166 L 277 162 L 275 158 L 273 154 L 271 150 L 269 146 L 267 142 L 265 138 L 263 134 L 261 130 L 259 126 L 258 122 L 256 118 L 254 114 Z">
+                    </path>
+                </g>
+            </svg>
+
+            <div id="realLogo" class="ascent-real-logo">
+                <img src="https://file.garden/atTpdg76zTCB65gN/ascent.png" alt="Ascent Logo">
+            </div>
+
+        </div>
+    </div>
+
+    <main id="mainPage" class="main-page">
+        <div class="showcase-container">
+            <img src="https://file.garden/atTpdg76zTCB65gN/ascentxxx.png" alt="Ascent" class="showcase-image">
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            const intro = document.getElementById('ascentIntro');
+            const introWrap = document.getElementById('introWrap');
+            const pathCut = document.getElementById('pathCut');
+            const pathBlade = document.getElementById('pathBlade');
+            const realLogo = document.getElementById('realLogo');
+            const mainPage = document.getElementById('mainPage');
+
+            let animId = null;
+            let startTime = null;
+            let pathLength = 0;
+
+            function runIntroAnimation() {
+                intro.classList.remove('hide');
+                introWrap.classList.remove('fly');
+                realLogo.classList.remove('visible');
+                mainPage.classList.remove('loaded');
+
+                pathCut.style.opacity = '1';
+                pathBlade.style.opacity = '1';
+
+                pathLength = pathCut.getTotalLength();
+
+                pathCut.style.strokeDasharray = pathLength;
+                pathCut.style.strokeDashoffset = pathLength;
+
+                const bladeLength = Math.max(50, pathLength * 0.12);
+                pathBlade.style.strokeDasharray = `${bladeLength} ${pathLength}`;
+                pathBlade.style.strokeDashoffset = bladeLength;
+
+                startTime = performance.now();
+
+                const drawDuration = 3400;
+
+                function step(now) {
+                    const elapsed = now - startTime;
+                    const progress = Math.min(1, elapsed / drawDuration);
+
+                    const eased = 1 - Math.pow(1 - progress, 3.2);
+
+                    const currentOffset = pathLength * (1 - eased);
+                    pathCut.style.strokeDashoffset = currentOffset;
+
+                    pathBlade.style.strokeDashoffset = currentOffset + bladeLength;
+
+                    if (progress < 1) {
+                        animId = requestAnimationFrame(step);
+                    } else {
+                        realLogo.classList.add('visible');
+                        pathCut.style.opacity = '0';
+                        pathBlade.style.opacity = '0';
+
+                        setTimeout(() => {
+                            introWrap.classList.add('fly');
+                            intro.classList.add('hide');
+                            mainPage.classList.add('loaded');
+                        }, 700);
+                    }
+                }
+
+                animId = requestAnimationFrame(step);
+            }
+
+            window.addEventListener('DOMContentLoaded', () => {
+                runIntroAnimation();
+            });
+        })();
+    </script>
+</body>
+
+</html>
