@@ -162,8 +162,10 @@ local function LoadAscent()
 
     _G.AscentLicense = USER_LICENSE
     _G.AscentUser = infoUser
+    _G.Angelica = infoUser
     _G.AscentExpires = formattedExpiry
     _G.AscentRawExpiry = expiryTimestamp
+    _G.AscentAuthed = true
 
     log("2", string.format("Key Verified! User: %s | Expiry: %s", tostring(infoUser), tostring(formattedExpiry)))
     log("2", "Loading script...")
