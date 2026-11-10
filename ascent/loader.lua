@@ -139,14 +139,9 @@ local function LoadAscent()
     if expiryTimestamp then
         local expNum = tonumber(expiryTimestamp)
         if expNum and expNum > 0 then
-            -- Safe check para hindi mag-crash kung walang os library
-            local success, now = pcall(function() return os.time() end)
-            if not success or not now then
-                now = expNum -- Fallback, ituturing na valid pa
-            end
-            
-            local diff = expNum - now
-            if diff > 0 then
+            local now = (type(GetCloudTimeAsInt) == "function" and GetCloudTimeAsInt()) or (type(os) == "table" and type(os.time) == "function" and os.time()) or 0
+            local diff = (now > 0) and (expNum - now) or 0
+            if now > 0 and diff > 0 then
                 local days = math.floor(diff / 86400)
                 local hours = math.floor((diff % 86400) / 3600)
                 local minutes = math.floor((diff % 3600) / 60)
@@ -157,8 +152,10 @@ local function LoadAscent()
                 else
                     formattedExpiry = string.format("%d minutes remaining", minutes)
                 end
-            else
+            elseif now > 0 and diff <= 0 then
                 formattedExpiry = "Expired"
+            else
+                formattedExpiry = "Active"
             end
         end
     end
@@ -168,7 +165,7 @@ local function LoadAscent()
     _G.AscentExpires = formattedExpiry
     _G.AscentRawExpiry = expiryTimestamp
 
-    log("2", string.format("Key Verified User: %s | Expiry: %s", tostring(infoUser), tostring(formattedExpiry)))
+    log("2", string.format("Key Verified! User: %s | Expiry: %s", tostring(infoUser), tostring(formattedExpiry)))
     log("2", "Loading script...")
 
     local scriptCode = httpGet(ASCENT_RAW_URL)
