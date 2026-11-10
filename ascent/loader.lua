@@ -139,7 +139,12 @@ local function LoadAscent()
     if expiryTimestamp then
         local expNum = tonumber(expiryTimestamp)
         if expNum and expNum > 0 then
-            local now = os.time()
+            -- Safe check para hindi mag-crash kung walang os library
+            local success, now = pcall(function() return os.time() end)
+            if not success or not now then
+                now = expNum -- Fallback, ituturing na valid pa
+            end
+            
             local diff = expNum - now
             if diff > 0 then
                 local days = math.floor(diff / 86400)
