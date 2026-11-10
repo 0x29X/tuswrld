@@ -8,9 +8,9 @@
 
     <meta name="description" content="Ascent">
     <meta property="og:title" content="Ascent">
-    <meta property="og:description" content="Ascent">
+    <meta property="og:description" content="dili pag kawata kay tigbason taka ron">
     <meta property="og:image" content="https://file.garden/atTpdg76zTCB65gN/ascentxxx.png">
-    <meta property="og:url" content="https://tuswrld.xyz/ascent.html">
+    <meta property="og:url" content="https://tuswrld.xyz/ascent/asc.html">
     <meta name="theme-color" content="#ef4444">
 
     <link rel="icon" href="https://file.garden/atTpdg76zTCB65gN/ascent.png" type="image/png">
@@ -24,6 +24,8 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            -webkit-user-drag: none;
+            user-select: none;
         }
 
         html,
@@ -31,10 +33,11 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            background: #000000;
+            background: #000000 !important;
             color: #ffffff;
             font-family: 'JetBrains Mono', monospace;
             user-select: none;
+            cursor: default;
         }
 
         .ascent-intro-overlay {
@@ -46,13 +49,14 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            cursor: default;
-            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            pointer-events: none;
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .ascent-intro-overlay.hide {
             opacity: 0;
             transform: scale(1.04);
+            visibility: hidden;
             pointer-events: none;
         }
 
@@ -63,7 +67,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform 0.85s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.65s ease;
+            pointer-events: none;
+            transition: transform 0.65s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.55s ease;
         }
 
         .ascent-intro-wrap.fly {
@@ -81,7 +86,7 @@
         }
 
         .trace-cut {
-            transition: opacity 0.4s ease;
+            transition: opacity 0.3s ease;
         }
 
         .trace-cut path {
@@ -93,7 +98,7 @@
         }
 
         .trace-blade {
-            transition: opacity 0.35s ease;
+            transition: opacity 0.3s ease;
         }
 
         .trace-blade path {
@@ -114,7 +119,7 @@
             justify-content: center;
             opacity: 0;
             transform: scale(0.96);
-            transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             pointer-events: none;
         }
 
@@ -127,6 +132,7 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+            pointer-events: none;
         }
 
         .main-page {
@@ -140,13 +146,15 @@
             justify-content: center;
             opacity: 0;
             transform: scale(0.96);
-            transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
             z-index: 10;
+            pointer-events: none;
         }
 
         .main-page.loaded {
-            opacity: 1;
-            transform: scale(1);
+            opacity: 1 !important;
+            transform: scale(1) !important;
+            visibility: visible !important;
         }
 
         .showcase-container {
@@ -155,6 +163,7 @@
             justify-content: center;
             max-width: 90vw;
             max-height: 90vh;
+            pointer-events: none;
         }
 
         .showcase-image {
@@ -163,6 +172,8 @@
             width: auto;
             height: auto;
             object-fit: contain;
+            pointer-events: none;
+            display: block;
         }
     </style>
 </head>
@@ -185,7 +196,7 @@
                 </g>
             </svg>
 
-            <div id="realLogo" class="ascent-real-logo">
+            <div id="ascentsecret" class="ascent-real-logo">
                 <img src="https://file.garden/atTpdg76zTCB65gN/ascent.png" alt="Ascent Logo">
             </div>
 
@@ -200,28 +211,35 @@
 
     <script>
         (function () {
+            window.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); }, true);
+            window.addEventListener('mousedown', function (e) { e.preventDefault(); e.stopPropagation(); }, true);
+            window.addEventListener('contextmenu', function (e) { e.preventDefault(); e.stopPropagation(); }, true);
+
             const intro = document.getElementById('ascentIntro');
             const introWrap = document.getElementById('introWrap');
             const pathCut = document.getElementById('pathCut');
             const pathBlade = document.getElementById('pathBlade');
-            const realLogo = document.getElementById('realLogo');
+            const ascentsecret = document.getElementById('ascentsecret');
             const mainPage = document.getElementById('mainPage');
 
             let animId = null;
             let startTime = null;
             let pathLength = 0;
+            let hasStarted = false;
 
             function runIntroAnimation() {
+                if (hasStarted) return;
+                hasStarted = true;
+
                 intro.classList.remove('hide');
                 introWrap.classList.remove('fly');
-                realLogo.classList.remove('visible');
+                ascentsecret.classList.remove('visible');
                 mainPage.classList.remove('loaded');
 
                 pathCut.style.opacity = '1';
                 pathBlade.style.opacity = '1';
 
                 pathLength = pathCut.getTotalLength();
-
                 pathCut.style.strokeDasharray = pathLength;
                 pathCut.style.strokeDashoffset = pathLength;
 
@@ -230,24 +248,21 @@
                 pathBlade.style.strokeDashoffset = bladeLength;
 
                 startTime = performance.now();
-
-                const drawDuration = 3400;
+                const drawDuration = 3200;
 
                 function step(now) {
                     const elapsed = now - startTime;
                     const progress = Math.min(1, elapsed / drawDuration);
-
                     const eased = 1 - Math.pow(1 - progress, 3.2);
 
                     const currentOffset = pathLength * (1 - eased);
                     pathCut.style.strokeDashoffset = currentOffset;
-
                     pathBlade.style.strokeDashoffset = currentOffset + bladeLength;
 
                     if (progress < 1) {
                         animId = requestAnimationFrame(step);
                     } else {
-                        realLogo.classList.add('visible');
+                        ascentsecret.classList.add('visible');
                         pathCut.style.opacity = '0';
                         pathBlade.style.opacity = '0';
 
@@ -255,12 +270,23 @@
                             introWrap.classList.add('fly');
                             intro.classList.add('hide');
                             mainPage.classList.add('loaded');
-                        }, 700);
+                        }, 600);
                     }
                 }
 
                 animId = requestAnimationFrame(step);
             }
+
+            window.addEventListener('message', (event) => {
+                let data = event.data;
+                if (typeof data === 'string') {
+                    try { data = JSON.parse(data); } catch (e) { }
+                }
+                if (data && data.action === 'startInjection') {
+                    hasStarted = false;
+                    runIntroAnimation();
+                }
+            });
 
             window.addEventListener('DOMContentLoaded', () => {
                 runIntroAnimation();
